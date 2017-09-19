@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3015BB1F1F6FF03F007A7035 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB1E1F6FF03F007A7035 /* main.m */; };
+		3015BB221F6FF03F007A7035 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB211F6FF03F007A7035 /* AppDelegate.m */; };
+		3015BB281F6FF03F007A7035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB261F6FF03F007A7035 /* Main.storyboard */; };
+		3015BB2A1F6FF03F007A7035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB291F6FF03F007A7035 /* Assets.xcassets */; };
+		3015BB2D1F6FF03F007A7035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB2B1F6FF03F007A7035 /* LaunchScreen.storyboard */; };
+		3015BB381F6FF03F007A7035 /* FJPhotoPickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB371F6FF03F007A7035 /* FJPhotoPickerDemoTests.m */; };
+		3015BB431F6FF03F007A7035 /* FJPhotoPickerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB421F6FF03F007A7035 /* FJPhotoPickerDemoUITests.m */; };
+		3015BB841F6FF4C9007A7035 /* FJAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB541F6FF4C9007A7035 /* FJAlbumPickerController.m */; };
+		3015BB851F6FF4C9007A7035 /* FJAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB561F6FF4C9007A7035 /* FJAssetCell.m */; };
+		3015BB861F6FF4C9007A7035 /* FJAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB581F6FF4C9007A7035 /* FJAssetModel.m */; };
+		3015BB871F6FF4C9007A7035 /* FJCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB5A1F6FF4C9007A7035 /* FJCollectionCell.m */; };
+		3015BB881F6FF4C9007A7035 /* FJCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB5B1F6FF4C9007A7035 /* FJCollectionCell.xib */; };
+		3015BB891F6FF4C9007A7035 /* FJGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB5E1F6FF4C9007A7035 /* FJGifPhotoPreviewController.m */; };
+		3015BB8A1F6FF4C9007A7035 /* FJImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB601F6FF4C9007A7035 /* FJImageCropManager.m */; };
+		3015BB8B1F6FF4C9007A7035 /* FJImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB621F6FF4C9007A7035 /* FJImageManager.m */; };
+		3015BB8C1F6FF4C9007A7035 /* FJImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB641F6FF4C9007A7035 /* FJImagePickerController.m */; };
+		3015BB8D1F6FF4C9007A7035 /* FJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB661F6FF4C9007A7035 /* FJLocationManager.m */; };
+		3015BB8E1F6FF4C9007A7035 /* FJNoAuthorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB681F6FF4C9007A7035 /* FJNoAuthorityViewController.m */; };
+		3015BB8F1F6FF4C9007A7035 /* FJNoAuthorityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB691F6FF4C9007A7035 /* FJNoAuthorityViewController.xib */; };
+		3015BB901F6FF4C9007A7035 /* FJPhotoActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB6B1F6FF4C9007A7035 /* FJPhotoActionSheet.m */; };
+		3015BB911F6FF4C9007A7035 /* FJPhotoActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB6C1F6FF4C9007A7035 /* FJPhotoActionSheet.xib */; };
+		3015BB921F6FF4C9007A7035 /* FJPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB6E1F6FF4C9007A7035 /* FJPhotoPickerController.m */; };
+		3015BB931F6FF4C9007A7035 /* FJPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB701F6FF4C9007A7035 /* FJPhotoPreviewCell.m */; };
+		3015BB941F6FF4C9007A7035 /* FJPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB721F6FF4C9007A7035 /* FJPhotoPreviewController.m */; };
+		3015BB951F6FF4C9007A7035 /* FJPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB741F6FF4C9007A7035 /* FJPhotoTool.m */; };
+		3015BB961F6FF4C9007A7035 /* FJProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB761F6FF4C9007A7035 /* FJProgressHUD.m */; };
+		3015BB971F6FF4C9007A7035 /* FJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB781F6FF4C9007A7035 /* FJProgressView.m */; };
+		3015BB981F6FF4C9007A7035 /* FJSelectPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB7A1F6FF4C9007A7035 /* FJSelectPhotoTool.m */; };
+		3015BB991F6FF4C9007A7035 /* FJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB7C1F6FF4C9007A7035 /* FJVideoPlayerController.m */; };
+		3015BB9A1F6FF4C9007A7035 /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB7F1F6FF4C9007A7035 /* ToastUtils.m */; };
+		3015BB9B1F6FF4C9007A7035 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB811F6FF4C9007A7035 /* UIView+Layout.m */; };
+		3015BB9C1F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BB831F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.m */; };
+		3015BBA21F6FF4DF007A7035 /* btn_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB9E1F6FF4DF007A7035 /* btn_selected@2x.png */; };
+		3015BBA31F6FF4DF007A7035 /* btn_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3015BB9F1F6FF4DF007A7035 /* btn_unselected@2x.png */; };
+		3015BBA41F6FF4DF007A7035 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3015BBA01F6FF4DF007A7035 /* lock.png */; };
+		3015BBA51F6FF4DF007A7035 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3015BBA11F6FF4DF007A7035 /* TZImagePickerController.bundle */; };
+		3015BBA91F6FF509007A7035 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BBA71F6FF509007A7035 /* TestViewController.m */; };
+		3015BBAA1F6FF509007A7035 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3015BBA81F6FF509007A7035 /* TestViewController.xib */; };
+		3015BBAC1F6FF5F6007A7035 /* NSBundle+FJImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3015BBAB1F6FF5F6007A7035 /* NSBundle+FJImagePicker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3015BB341F6FF03F007A7035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3015BB121F6FF03F007A7035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3015BB191F6FF03F007A7035;
+			remoteInfo = FJPhotoPickerDemo;
+		};
+		3015BB3F1F6FF03F007A7035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3015BB121F6FF03F007A7035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3015BB191F6FF03F007A7035;
+			remoteInfo = FJPhotoPickerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3015BB1A1F6FF03F007A7035 /* FJPhotoPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJPhotoPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3015BB1E1F6FF03F007A7035 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3015BB201F6FF03F007A7035 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3015BB211F6FF03F007A7035 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3015BB271F6FF03F007A7035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3015BB291F6FF03F007A7035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3015BB2C1F6FF03F007A7035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3015BB2E1F6FF03F007A7035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3015BB331F6FF03F007A7035 /* FJPhotoPickerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FJPhotoPickerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3015BB371F6FF03F007A7035 /* FJPhotoPickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJPhotoPickerDemoTests.m; sourceTree = "<group>"; };
+		3015BB391F6FF03F007A7035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3015BB3E1F6FF03F007A7035 /* FJPhotoPickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FJPhotoPickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3015BB421F6FF03F007A7035 /* FJPhotoPickerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJPhotoPickerDemoUITests.m; sourceTree = "<group>"; };
+		3015BB441F6FF03F007A7035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3015BB531F6FF4C9007A7035 /* FJAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJAlbumPickerController.h; sourceTree = "<group>"; };
+		3015BB541F6FF4C9007A7035 /* FJAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJAlbumPickerController.m; sourceTree = "<group>"; };
+		3015BB551F6FF4C9007A7035 /* FJAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJAssetCell.h; sourceTree = "<group>"; };
+		3015BB561F6FF4C9007A7035 /* FJAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJAssetCell.m; sourceTree = "<group>"; };
+		3015BB571F6FF4C9007A7035 /* FJAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJAssetModel.h; sourceTree = "<group>"; };
+		3015BB581F6FF4C9007A7035 /* FJAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJAssetModel.m; sourceTree = "<group>"; };
+		3015BB591F6FF4C9007A7035 /* FJCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCollectionCell.h; sourceTree = "<group>"; };
+		3015BB5A1F6FF4C9007A7035 /* FJCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCollectionCell.m; sourceTree = "<group>"; };
+		3015BB5B1F6FF4C9007A7035 /* FJCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJCollectionCell.xib; sourceTree = "<group>"; };
+		3015BB5C1F6FF4C9007A7035 /* FJDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJDefine.h; sourceTree = "<group>"; };
+		3015BB5D1F6FF4C9007A7035 /* FJGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		3015BB5E1F6FF4C9007A7035 /* FJGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		3015BB5F1F6FF4C9007A7035 /* FJImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJImageCropManager.h; sourceTree = "<group>"; };
+		3015BB601F6FF4C9007A7035 /* FJImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJImageCropManager.m; sourceTree = "<group>"; };
+		3015BB611F6FF4C9007A7035 /* FJImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJImageManager.h; sourceTree = "<group>"; };
+		3015BB621F6FF4C9007A7035 /* FJImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJImageManager.m; sourceTree = "<group>"; };
+		3015BB631F6FF4C9007A7035 /* FJImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJImagePickerController.h; sourceTree = "<group>"; };
+		3015BB641F6FF4C9007A7035 /* FJImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJImagePickerController.m; sourceTree = "<group>"; };
+		3015BB651F6FF4C9007A7035 /* FJLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJLocationManager.h; sourceTree = "<group>"; };
+		3015BB661F6FF4C9007A7035 /* FJLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJLocationManager.m; sourceTree = "<group>"; };
+		3015BB671F6FF4C9007A7035 /* FJNoAuthorityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJNoAuthorityViewController.h; sourceTree = "<group>"; };
+		3015BB681F6FF4C9007A7035 /* FJNoAuthorityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJNoAuthorityViewController.m; sourceTree = "<group>"; };
+		3015BB691F6FF4C9007A7035 /* FJNoAuthorityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJNoAuthorityViewController.xib; sourceTree = "<group>"; };
+		3015BB6A1F6FF4C9007A7035 /* FJPhotoActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoActionSheet.h; sourceTree = "<group>"; };
+		3015BB6B1F6FF4C9007A7035 /* FJPhotoActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoActionSheet.m; sourceTree = "<group>"; };
+		3015BB6C1F6FF4C9007A7035 /* FJPhotoActionSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJPhotoActionSheet.xib; sourceTree = "<group>"; };
+		3015BB6D1F6FF4C9007A7035 /* FJPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoPickerController.h; sourceTree = "<group>"; };
+		3015BB6E1F6FF4C9007A7035 /* FJPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoPickerController.m; sourceTree = "<group>"; };
+		3015BB6F1F6FF4C9007A7035 /* FJPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoPreviewCell.h; sourceTree = "<group>"; };
+		3015BB701F6FF4C9007A7035 /* FJPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoPreviewCell.m; sourceTree = "<group>"; };
+		3015BB711F6FF4C9007A7035 /* FJPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoPreviewController.h; sourceTree = "<group>"; };
+		3015BB721F6FF4C9007A7035 /* FJPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoPreviewController.m; sourceTree = "<group>"; };
+		3015BB731F6FF4C9007A7035 /* FJPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoTool.h; sourceTree = "<group>"; };
+		3015BB741F6FF4C9007A7035 /* FJPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoTool.m; sourceTree = "<group>"; };
+		3015BB751F6FF4C9007A7035 /* FJProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJProgressHUD.h; sourceTree = "<group>"; };
+		3015BB761F6FF4C9007A7035 /* FJProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJProgressHUD.m; sourceTree = "<group>"; };
+		3015BB771F6FF4C9007A7035 /* FJProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJProgressView.h; sourceTree = "<group>"; };
+		3015BB781F6FF4C9007A7035 /* FJProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJProgressView.m; sourceTree = "<group>"; };
+		3015BB791F6FF4C9007A7035 /* FJSelectPhotoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSelectPhotoTool.h; sourceTree = "<group>"; };
+		3015BB7A1F6FF4C9007A7035 /* FJSelectPhotoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSelectPhotoTool.m; sourceTree = "<group>"; };
+		3015BB7B1F6FF4C9007A7035 /* FJVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJVideoPlayerController.h; sourceTree = "<group>"; };
+		3015BB7C1F6FF4C9007A7035 /* FJVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoPlayerController.m; sourceTree = "<group>"; };
+		3015BB7D1F6FF4C9007A7035 /* NSBundle+FJImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FJImagePicker.h"; sourceTree = "<group>"; };
+		3015BB7E1F6FF4C9007A7035 /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastUtils.h; sourceTree = "<group>"; };
+		3015BB7F1F6FF4C9007A7035 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
+		3015BB801F6FF4C9007A7035 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		3015BB811F6FF4C9007A7035 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		3015BB821F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FJCurrentViewController.h"; sourceTree = "<group>"; };
+		3015BB831F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FJCurrentViewController.m"; sourceTree = "<group>"; };
+		3015BB9E1F6FF4DF007A7035 /* btn_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_selected@2x.png"; sourceTree = "<group>"; };
+		3015BB9F1F6FF4DF007A7035 /* btn_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_unselected@2x.png"; sourceTree = "<group>"; };
+		3015BBA01F6FF4DF007A7035 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		3015BBA11F6FF4DF007A7035 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		3015BBA61F6FF509007A7035 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		3015BBA71F6FF509007A7035 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		3015BBA81F6FF509007A7035 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		3015BBAB1F6FF5F6007A7035 /* NSBundle+FJImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FJImagePicker.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3015BB171F6FF03F007A7035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3015BB301F6FF03F007A7035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3015BB3B1F6FF03F007A7035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3015BB111F6FF03F007A7035 = {
+			isa = PBXGroup;
+			children = (
+				3015BB1C1F6FF03F007A7035 /* FJPhotoPickerDemo */,
+				3015BB361F6FF03F007A7035 /* FJPhotoPickerDemoTests */,
+				3015BB411F6FF03F007A7035 /* FJPhotoPickerDemoUITests */,
+				3015BB1B1F6FF03F007A7035 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3015BB1B1F6FF03F007A7035 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB1A1F6FF03F007A7035 /* FJPhotoPickerDemo.app */,
+				3015BB331F6FF03F007A7035 /* FJPhotoPickerDemoTests.xctest */,
+				3015BB3E1F6FF03F007A7035 /* FJPhotoPickerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3015BB1C1F6FF03F007A7035 /* FJPhotoPickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB501F6FF46C007A7035 /* FJPhotoPicker */,
+				3015BB201F6FF03F007A7035 /* AppDelegate.h */,
+				3015BB211F6FF03F007A7035 /* AppDelegate.m */,
+				3015BBA61F6FF509007A7035 /* TestViewController.h */,
+				3015BBA71F6FF509007A7035 /* TestViewController.m */,
+				3015BBA81F6FF509007A7035 /* TestViewController.xib */,
+				3015BB261F6FF03F007A7035 /* Main.storyboard */,
+				3015BB291F6FF03F007A7035 /* Assets.xcassets */,
+				3015BB2B1F6FF03F007A7035 /* LaunchScreen.storyboard */,
+				3015BB2E1F6FF03F007A7035 /* Info.plist */,
+				3015BB1D1F6FF03F007A7035 /* Supporting Files */,
+			);
+			path = FJPhotoPickerDemo;
+			sourceTree = "<group>";
+		};
+		3015BB1D1F6FF03F007A7035 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB1E1F6FF03F007A7035 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3015BB361F6FF03F007A7035 /* FJPhotoPickerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB371F6FF03F007A7035 /* FJPhotoPickerDemoTests.m */,
+				3015BB391F6FF03F007A7035 /* Info.plist */,
+			);
+			path = FJPhotoPickerDemoTests;
+			sourceTree = "<group>";
+		};
+		3015BB411F6FF03F007A7035 /* FJPhotoPickerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB421F6FF03F007A7035 /* FJPhotoPickerDemoUITests.m */,
+				3015BB441F6FF03F007A7035 /* Info.plist */,
+			);
+			path = FJPhotoPickerDemoUITests;
+			sourceTree = "<group>";
+		};
+		3015BB501F6FF46C007A7035 /* FJPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB9D1F6FF4DF007A7035 /* Resources */,
+				3015BB511F6FF486007A7035 /* FJPhotoPickerInfo */,
+			);
+			path = FJPhotoPicker;
+			sourceTree = "<group>";
+		};
+		3015BB511F6FF486007A7035 /* FJPhotoPickerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB531F6FF4C9007A7035 /* FJAlbumPickerController.h */,
+				3015BB541F6FF4C9007A7035 /* FJAlbumPickerController.m */,
+				3015BB551F6FF4C9007A7035 /* FJAssetCell.h */,
+				3015BB561F6FF4C9007A7035 /* FJAssetCell.m */,
+				3015BB571F6FF4C9007A7035 /* FJAssetModel.h */,
+				3015BB581F6FF4C9007A7035 /* FJAssetModel.m */,
+				3015BB591F6FF4C9007A7035 /* FJCollectionCell.h */,
+				3015BB5A1F6FF4C9007A7035 /* FJCollectionCell.m */,
+				3015BB5B1F6FF4C9007A7035 /* FJCollectionCell.xib */,
+				3015BB5C1F6FF4C9007A7035 /* FJDefine.h */,
+				3015BB5D1F6FF4C9007A7035 /* FJGifPhotoPreviewController.h */,
+				3015BB5E1F6FF4C9007A7035 /* FJGifPhotoPreviewController.m */,
+				3015BB5F1F6FF4C9007A7035 /* FJImageCropManager.h */,
+				3015BB601F6FF4C9007A7035 /* FJImageCropManager.m */,
+				3015BB611F6FF4C9007A7035 /* FJImageManager.h */,
+				3015BB621F6FF4C9007A7035 /* FJImageManager.m */,
+				3015BB631F6FF4C9007A7035 /* FJImagePickerController.h */,
+				3015BB641F6FF4C9007A7035 /* FJImagePickerController.m */,
+				3015BB651F6FF4C9007A7035 /* FJLocationManager.h */,
+				3015BB661F6FF4C9007A7035 /* FJLocationManager.m */,
+				3015BB671F6FF4C9007A7035 /* FJNoAuthorityViewController.h */,
+				3015BB681F6FF4C9007A7035 /* FJNoAuthorityViewController.m */,
+				3015BB691F6FF4C9007A7035 /* FJNoAuthorityViewController.xib */,
+				3015BB6A1F6FF4C9007A7035 /* FJPhotoActionSheet.h */,
+				3015BB6B1F6FF4C9007A7035 /* FJPhotoActionSheet.m */,
+				3015BB6C1F6FF4C9007A7035 /* FJPhotoActionSheet.xib */,
+				3015BB6D1F6FF4C9007A7035 /* FJPhotoPickerController.h */,
+				3015BB6E1F6FF4C9007A7035 /* FJPhotoPickerController.m */,
+				3015BB6F1F6FF4C9007A7035 /* FJPhotoPreviewCell.h */,
+				3015BB701F6FF4C9007A7035 /* FJPhotoPreviewCell.m */,
+				3015BB711F6FF4C9007A7035 /* FJPhotoPreviewController.h */,
+				3015BB721F6FF4C9007A7035 /* FJPhotoPreviewController.m */,
+				3015BB731F6FF4C9007A7035 /* FJPhotoTool.h */,
+				3015BB741F6FF4C9007A7035 /* FJPhotoTool.m */,
+				3015BB751F6FF4C9007A7035 /* FJProgressHUD.h */,
+				3015BB761F6FF4C9007A7035 /* FJProgressHUD.m */,
+				3015BB771F6FF4C9007A7035 /* FJProgressView.h */,
+				3015BB781F6FF4C9007A7035 /* FJProgressView.m */,
+				3015BB791F6FF4C9007A7035 /* FJSelectPhotoTool.h */,
+				3015BB7A1F6FF4C9007A7035 /* FJSelectPhotoTool.m */,
+				3015BB7B1F6FF4C9007A7035 /* FJVideoPlayerController.h */,
+				3015BB7C1F6FF4C9007A7035 /* FJVideoPlayerController.m */,
+				3015BB7D1F6FF4C9007A7035 /* NSBundle+FJImagePicker.h */,
+				3015BBAB1F6FF5F6007A7035 /* NSBundle+FJImagePicker.m */,
+				3015BB7E1F6FF4C9007A7035 /* ToastUtils.h */,
+				3015BB7F1F6FF4C9007A7035 /* ToastUtils.m */,
+				3015BB801F6FF4C9007A7035 /* UIView+Layout.h */,
+				3015BB811F6FF4C9007A7035 /* UIView+Layout.m */,
+				3015BB821F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.h */,
+				3015BB831F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.m */,
+			);
+			path = FJPhotoPickerInfo;
+			sourceTree = "<group>";
+		};
+		3015BB9D1F6FF4DF007A7035 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3015BB9E1F6FF4DF007A7035 /* btn_selected@2x.png */,
+				3015BB9F1F6FF4DF007A7035 /* btn_unselected@2x.png */,
+				3015BBA01F6FF4DF007A7035 /* lock.png */,
+				3015BBA11F6FF4DF007A7035 /* TZImagePickerController.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3015BB191F6FF03F007A7035 /* FJPhotoPickerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3015BB471F6FF03F007A7035 /* Build configuration list for PBXNativeTarget "FJPhotoPickerDemo" */;
+			buildPhases = (
+				3015BB161F6FF03F007A7035 /* Sources */,
+				3015BB171F6FF03F007A7035 /* Frameworks */,
+				3015BB181F6FF03F007A7035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FJPhotoPickerDemo;
+			productName = FJPhotoPickerDemo;
+			productReference = 3015BB1A1F6FF03F007A7035 /* FJPhotoPickerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3015BB321F6FF03F007A7035 /* FJPhotoPickerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3015BB4A1F6FF03F007A7035 /* Build configuration list for PBXNativeTarget "FJPhotoPickerDemoTests" */;
+			buildPhases = (
+				3015BB2F1F6FF03F007A7035 /* Sources */,
+				3015BB301F6FF03F007A7035 /* Frameworks */,
+				3015BB311F6FF03F007A7035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3015BB351F6FF03F007A7035 /* PBXTargetDependency */,
+			);
+			name = FJPhotoPickerDemoTests;
+			productName = FJPhotoPickerDemoTests;
+			productReference = 3015BB331F6FF03F007A7035 /* FJPhotoPickerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3015BB3D1F6FF03F007A7035 /* FJPhotoPickerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3015BB4D1F6FF03F007A7035 /* Build configuration list for PBXNativeTarget "FJPhotoPickerDemoUITests" */;
+			buildPhases = (
+				3015BB3A1F6FF03F007A7035 /* Sources */,
+				3015BB3B1F6FF03F007A7035 /* Frameworks */,
+				3015BB3C1F6FF03F007A7035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3015BB401F6FF03F007A7035 /* PBXTargetDependency */,
+			);
+			name = FJPhotoPickerDemoUITests;
+			productName = FJPhotoPickerDemoUITests;
+			productReference = 3015BB3E1F6FF03F007A7035 /* FJPhotoPickerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3015BB121F6FF03F007A7035 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = fjf;
+				TargetAttributes = {
+					3015BB191F6FF03F007A7035 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = L8R666257B;
+						ProvisioningStyle = Automatic;
+					};
+					3015BB321F6FF03F007A7035 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3015BB191F6FF03F007A7035;
+					};
+					3015BB3D1F6FF03F007A7035 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3015BB191F6FF03F007A7035;
+					};
+				};
+			};
+			buildConfigurationList = 3015BB151F6FF03F007A7035 /* Build configuration list for PBXProject "FJPhotoPickerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3015BB111F6FF03F007A7035;
+			productRefGroup = 3015BB1B1F6FF03F007A7035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3015BB191F6FF03F007A7035 /* FJPhotoPickerDemo */,
+				3015BB321F6FF03F007A7035 /* FJPhotoPickerDemoTests */,
+				3015BB3D1F6FF03F007A7035 /* FJPhotoPickerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3015BB181F6FF03F007A7035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3015BB8F1F6FF4C9007A7035 /* FJNoAuthorityViewController.xib in Resources */,
+				3015BBA31F6FF4DF007A7035 /* btn_unselected@2x.png in Resources */,
+				3015BBA41F6FF4DF007A7035 /* lock.png in Resources */,
+				3015BBAA1F6FF509007A7035 /* TestViewController.xib in Resources */,
+				3015BB2D1F6FF03F007A7035 /* LaunchScreen.storyboard in Resources */,
+				3015BB911F6FF4C9007A7035 /* FJPhotoActionSheet.xib in Resources */,
+				3015BB881F6FF4C9007A7035 /* FJCollectionCell.xib in Resources */,
+				3015BBA21F6FF4DF007A7035 /* btn_selected@2x.png in Resources */,
+				3015BBA51F6FF4DF007A7035 /* TZImagePickerController.bundle in Resources */,
+				3015BB2A1F6FF03F007A7035 /* Assets.xcassets in Resources */,
+				3015BB281F6FF03F007A7035 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3015BB311F6FF03F007A7035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3015BB3C1F6FF03F007A7035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3015BB161F6FF03F007A7035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3015BBAC1F6FF5F6007A7035 /* NSBundle+FJImagePicker.m in Sources */,
+				3015BB8C1F6FF4C9007A7035 /* FJImagePickerController.m in Sources */,
+				3015BB9C1F6FF4C9007A7035 /* UIViewController+FJCurrentViewController.m in Sources */,
+				3015BB901F6FF4C9007A7035 /* FJPhotoActionSheet.m in Sources */,
+				3015BB971F6FF4C9007A7035 /* FJProgressView.m in Sources */,
+				3015BB851F6FF4C9007A7035 /* FJAssetCell.m in Sources */,
+				3015BB221F6FF03F007A7035 /* AppDelegate.m in Sources */,
+				3015BB871F6FF4C9007A7035 /* FJCollectionCell.m in Sources */,
+				3015BB9A1F6FF4C9007A7035 /* ToastUtils.m in Sources */,
+				3015BB951F6FF4C9007A7035 /* FJPhotoTool.m in Sources */,
+				3015BB1F1F6FF03F007A7035 /* main.m in Sources */,
+				3015BB8E1F6FF4C9007A7035 /* FJNoAuthorityViewController.m in Sources */,
+				3015BB921F6FF4C9007A7035 /* FJPhotoPickerController.m in Sources */,
+				3015BB941F6FF4C9007A7035 /* FJPhotoPreviewController.m in Sources */,
+				3015BBA91F6FF509007A7035 /* TestViewController.m in Sources */,
+				3015BB8D1F6FF4C9007A7035 /* FJLocationManager.m in Sources */,
+				3015BB861F6FF4C9007A7035 /* FJAssetModel.m in Sources */,
+				3015BB991F6FF4C9007A7035 /* FJVideoPlayerController.m in Sources */,
+				3015BB931F6FF4C9007A7035 /* FJPhotoPreviewCell.m in Sources */,
+				3015BB961F6FF4C9007A7035 /* FJProgressHUD.m in Sources */,
+				3015BB8A1F6FF4C9007A7035 /* FJImageCropManager.m in Sources */,
+				3015BB891F6FF4C9007A7035 /* FJGifPhotoPreviewController.m in Sources */,
+				3015BB9B1F6FF4C9007A7035 /* UIView+Layout.m in Sources */,
+				3015BB841F6FF4C9007A7035 /* FJAlbumPickerController.m in Sources */,
+				3015BB981F6FF4C9007A7035 /* FJSelectPhotoTool.m in Sources */,
+				3015BB8B1F6FF4C9007A7035 /* FJImageManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3015BB2F1F6FF03F007A7035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3015BB381F6FF03F007A7035 /* FJPhotoPickerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3015BB3A1F6FF03F007A7035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3015BB431F6FF03F007A7035 /* FJPhotoPickerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3015BB351F6FF03F007A7035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3015BB191F6FF03F007A7035 /* FJPhotoPickerDemo */;
+			targetProxy = 3015BB341F6FF03F007A7035 /* PBXContainerItemProxy */;
+		};
+		3015BB401F6FF03F007A7035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3015BB191F6FF03F007A7035 /* FJPhotoPickerDemo */;
+			targetProxy = 3015BB3F1F6FF03F007A7035 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3015BB261F6FF03F007A7035 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3015BB271F6FF03F007A7035 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3015BB2B1F6FF03F007A7035 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3015BB2C1F6FF03F007A7035 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3015BB451F6FF03F007A7035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3015BB461F6FF03F007A7035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3015BB481F6FF03F007A7035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L8R666257B;
+				INFOPLIST_FILE = FJPhotoPickerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.FJPhotoPickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3015BB491F6FF03F007A7035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L8R666257B;
+				INFOPLIST_FILE = FJPhotoPickerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.FJPhotoPickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3015BB4B1F6FF03F007A7035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FJPhotoPickerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.FJPhotoPickerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FJPhotoPickerDemo.app/FJPhotoPickerDemo";
+			};
+			name = Debug;
+		};
+		3015BB4C1F6FF03F007A7035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FJPhotoPickerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.FJPhotoPickerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FJPhotoPickerDemo.app/FJPhotoPickerDemo";
+			};
+			name = Release;
+		};
+		3015BB4E1F6FF03F007A7035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FJPhotoPickerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.FJPhotoPickerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FJPhotoPickerDemo;
+			};
+			name = Debug;
+		};
+		3015BB4F1F6FF03F007A7035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FJPhotoPickerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.FJPhotoPickerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FJPhotoPickerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3015BB151F6FF03F007A7035 /* Build configuration list for PBXProject "FJPhotoPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3015BB451F6FF03F007A7035 /* Debug */,
+				3015BB461F6FF03F007A7035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3015BB471F6FF03F007A7035 /* Build configuration list for PBXNativeTarget "FJPhotoPickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3015BB481F6FF03F007A7035 /* Debug */,
+				3015BB491F6FF03F007A7035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3015BB4A1F6FF03F007A7035 /* Build configuration list for PBXNativeTarget "FJPhotoPickerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3015BB4B1F6FF03F007A7035 /* Debug */,
+				3015BB4C1F6FF03F007A7035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3015BB4D1F6FF03F007A7035 /* Build configuration list for PBXNativeTarget "FJPhotoPickerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3015BB4E1F6FF03F007A7035 /* Debug */,
+				3015BB4F1F6FF03F007A7035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3015BB121F6FF03F007A7035 /* Project object */;
+}

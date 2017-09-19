@@ -4,9 +4,11 @@
 
 **效果图**
 
+FJPhotoPicker-Preview:
 
 ![FJPhotoPicker-Preview](https://github.com/fangjinfeng/FJPhotoPicker/blob/master/FJPhotoPickerDemo/Snapshots/FJPhotoPicker-Preview.gif)
 
+FJPhotoPicker-Album:
 
 ![FJPhotoPicker-Album](https://github.com/fangjinfeng/FJPhotoPicker/blob/master/FJPhotoPickerDemo/Snapshots/FJPhotoPicker-Album.gif)
 

@@ -38,14 +38,14 @@
     FJImagePickerController *imagePickerVc = (FJImagePickerController *)self.navigationController;
     [imagePickerVc hideProgressHUD];
     if (imagePickerVc.allowTakePicture) {
-        self.navigationItem.title = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserPhotoText"];
+        self.navigationItem.title = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserPhotoText"];
     } else if (imagePickerVc.allowPickingVideo) {
-        self.navigationItem.title = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserVideoText"];
+        self.navigationItem.title = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserVideoText"];
     }
     
     // 1.6.10 采用微信的方式，只在相册列表页定义backBarButtonItem为返回，其余的顺系统的做法
     if (self.isFirstAppear) {
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserBackText"] style:UIBarButtonItemStylePlain target:nil action:nil];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserBackText"] style:UIBarButtonItemStylePlain target:nil action:nil];
         self.isFirstAppear = NO;
     }
     

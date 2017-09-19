@@ -1,6 +1,6 @@
 //
 //  UIViewController+FJCurrentViewController.m
-//  ZLPhotoBrowser
+//  FJPhotoBrowser
 //
 //  Created by fjf on 2017/6/20.
 //  Copyright © 2017年 long. All rights reserved.

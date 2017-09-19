@@ -81,7 +81,7 @@
             _tipLabel.textColor = [UIColor blackColor];
             NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
             if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
-            NSString *tipText = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserNoAblumAuthorityText"],appName];
+            NSString *tipText = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserNoAblumAuthorityText"],appName];
             _tipLabel.text = tipText;
             [self.view addSubview:_tipLabel];
             
@@ -267,12 +267,12 @@
 }
 
 - (void)configDefaultBtnTitle {
-    self.doneBtnTitleStr = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserDoneText"];
-    self.cancelBtnTitleStr = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCancelText"];
-    self.previewBtnTitleStr = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserPreviewText"];
-    self.fullImageBtnTitleStr = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserOriginalText"];
-    self.settingBtnTitleStr = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserSettingText"];
-    self.processHintStr = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserHandleText"];
+    self.doneBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserDoneText"];
+    self.cancelBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"];
+    self.previewBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserPreviewText"];
+    self.fullImageBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOriginalText"];
+    self.settingBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSettingText"];
+    self.processHintStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserHandleText"];
 }
 
 - (void)observeAuthrizationStatusChange {
@@ -308,11 +308,11 @@
 - (id)showAlertWithTitle:(NSString *)title {
     if (iOS8Later) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserOKText"] style:UIAlertActionStyleDefault handler:nil]];
+        [alertController addAction:[UIAlertAction actionWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alertController animated:YES completion:nil];
         return alertController;
     } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserOKText"] otherButtonTitles:nil, nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles:nil, nil];
         [alertView show];
         return alertView;
     }
@@ -499,8 +499,8 @@
         if ([[UIApplication sharedApplication] canOpenURL:privacyUrl]) {
             [[UIApplication sharedApplication] openURL:privacyUrl];
         } else {
-            NSString *message = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCanNotJumpToPrivacySettingPage"];
-            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserOKText"] otherButtonTitles: nil];
+            NSString *message = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotJumpToPrivacySettingPage"];
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles: nil];
             [alert show];
         }
     }

@@ -1,6 +1,6 @@
 //
 //  FJSelectPhotoTool.m
-//  ZLPhotoBrowser
+//  FJPhotoBrowser
 //
 //  Created by fjf on 2017/8/19.
 //  Copyright © 2017年 fjf. All rights reserved.

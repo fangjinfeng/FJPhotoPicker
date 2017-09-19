@@ -323,7 +323,7 @@ static CGFloat itemMargin = 5;
     FJImagePickerController *tzImagePickerVc = (FJImagePickerController *)self.navigationController;
     // 1.6.8 判断是否满足最小必选张数的限制
     if (tzImagePickerVc.minImagesCount && tzImagePickerVc.selectedModels.count < tzImagePickerVc.minImagesCount) {
-        NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserMinSelectCountText"], tzImagePickerVc.minImagesCount];
+        NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserMinSelectCountText"], tzImagePickerVc.minImagesCount];
         [tzImagePickerVc showAlertWithTitle:title];
         return;
     }
@@ -358,7 +358,7 @@ static CGFloat itemMargin = 5;
             // 如果图片正在从iCloud同步中,提醒用户
             if (progress < 1 && havenotShowAlert && !alertView) {
                 [tzImagePickerVc hideProgressHUD];
-                alertView = [tzImagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserSynchronizingPhotosFromiCloudText"]];
+                alertView = [tzImagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSynchronizingPhotosFromiCloudText"]];
                 havenotShowAlert = NO;
                 return;
             }
@@ -464,7 +464,7 @@ static CGFloat itemMargin = 5;
                 [tzImagePickerVc.selectedModels addObject:model];
                 [weakSelf refreshBottomToolBarStatus];
             } else {
-                NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserMaxSelectCountText"], tzImagePickerVc.maxImagesCount];
+                NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], tzImagePickerVc.maxImagesCount];
                 [tzImagePickerVc showAlertWithTitle:title];
             }
         }
@@ -488,7 +488,7 @@ static CGFloat itemMargin = 5;
     if (model.type == TZAssetModelMediaTypeVideo && !tzImagePickerVc.allowPickingMultipleVideo) {
         if (tzImagePickerVc.selectedModels.count > 0) {
             FJImagePickerController *imagePickerVc = (FJImagePickerController *)self.navigationController;
-            [imagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCanNotChosseVideoWhenPhotoTypeText"]];
+            [imagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotChosseVideoWhenPhotoTypeText"]];
         } else {
             FJVideoPlayerController *videoPlayerVc = [[FJVideoPlayerController alloc] init];
             videoPlayerVc.model = model;
@@ -497,7 +497,7 @@ static CGFloat itemMargin = 5;
     } else if (model.type == TZAssetModelMediaTypePhotoGif && tzImagePickerVc.allowPickingGif && !tzImagePickerVc.allowPickingMultipleVideo) {
         if (tzImagePickerVc.selectedModels.count > 0) {
             FJImagePickerController *imagePickerVc = (FJImagePickerController *)self.navigationController;
-            [imagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCanNotChosseGifWhenPhotoTypeText"]];
+            [imagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotChosseGifWhenPhotoTypeText"]];
         } else {
             FJGifPhotoPreviewController *gifPreviewVc = [[FJGifPhotoPreviewController alloc] init];
             gifPreviewVc.model = model;
@@ -528,8 +528,8 @@ static CGFloat itemMargin = 5;
         // 无权限 做一个友好的提示
         NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
         if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
-        NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserNoCameraAuthorityText"],appName];
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCannotUseCamera"] message:message delegate:self cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCancelText"] otherButtonTitles:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserSettingText"], nil];
+        NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserNoCameraAuthorityText"],appName];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCannotUseCamera"] message:message delegate:self cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"] otherButtonTitles:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSettingText"], nil];
         [alert show];
     } else if (authStatus == AVAuthorizationStatusNotDetermined) {
         // fix issue 466, 防止用户首次拍照拒绝授权时相机页黑屏
@@ -669,8 +669,8 @@ static CGFloat itemMargin = 5;
             if ([[UIApplication sharedApplication] canOpenURL:privacyUrl]) {
                 [[UIApplication sharedApplication] openURL:privacyUrl];
             } else {
-                NSString *message = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCanNotJumpToPrivacySettingPage"];
-                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserOKText"] otherButtonTitles: nil];
+                NSString *message = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotJumpToPrivacySettingPage"];
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles: nil];
                 [alert show];
             }
         }

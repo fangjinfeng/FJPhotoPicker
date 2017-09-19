@@ -1,6 +1,6 @@
 //
 //  ZLProgressHUD.m
-//  ZLPhotoBrowser
+//  FJPhotoBrowser
 //
 //  Created by long on 16/2/15.
 //  Copyright © 2016年 long. All rights reserved.
@@ -40,7 +40,7 @@
     lab.textAlignment = NSTextAlignmentCenter;
     lab.textColor = [UIColor whiteColor];
     lab.font = [UIFont systemFontOfSize:16];
-    lab.text = [NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserHandleText"];
+    lab.text = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserHandleText"];
     
     [view addSubview:indicator];
     [view addSubview:lab];

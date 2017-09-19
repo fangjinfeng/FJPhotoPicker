@@ -75,7 +75,7 @@
         [_doneButton setTitle:tzImagePickerVc.doneBtnTitleStr forState:UIControlStateNormal];
         [_doneButton setTitleColor:tzImagePickerVc.oKButtonTitleColorNormal forState:UIControlStateNormal];
     } else {
-        [_doneButton setTitle:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserDoneText"] forState:UIControlStateNormal];
+        [_doneButton setTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserDoneText"] forState:UIControlStateNormal];
         [_doneButton setTitleColor:kFJPhotoButtonTitleNormalColor forState:UIControlStateNormal];
     }
     [_toolBar addSubview:_doneButton];

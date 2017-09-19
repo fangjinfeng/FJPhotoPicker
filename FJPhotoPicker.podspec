@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { 'fangjinfeng' => '116418179@qq.com' }
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
-  s.source       = { :git => "https://github.com/fangjinfeng/FJPhotoPicker.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/fangjinfeng/FJPhotoPicker.git", :tag => "0.0.3" }
   s.source_files = "FJPhotoPicker/**/*.{h,m,xib}"
   s.resources    = "FJPhotoPicker/Resources/*.{png,bundle}"
   s.requires_arc = true

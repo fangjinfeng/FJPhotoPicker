@@ -12,9 +12,13 @@ FJPhotoPicker-Album:
 
 ![FJPhotoPicker-Album](https://github.com/fangjinfeng/FJPhotoPicker/blob/master/FJPhotoPickerDemo/Snapshots/FJPhotoPicker-Album.gif)
 
+FJPhotoPicker-SystemAlbum:
 
 ![FJPhotoPicker-SystemAlbum](https://github.com/fangjinfeng/FJPhotoPicker/blob/master/FJPhotoPickerDemo/Snapshots/FJPhotoPicker-SystemAlbum.gif)
 
+FJPhotoPicker-Camera:
+
 ![FJPhotoPicker-Camera](https://github.com/fangjinfeng/FJPhotoPicker/blob/master/FJPhotoPickerDemo/Snapshots/FJPhotoPicker-Camera.gif)
 
+FJPhotoPicker-NoAuthorization:
 ![FJPhotoPicker-NoAuthorization](https://github.com/fangjinfeng/FJPhotoPicker/blob/master/FJPhotoPickerDemo/Snapshots/FJPhotoPicker-NoAuthorization.gif)

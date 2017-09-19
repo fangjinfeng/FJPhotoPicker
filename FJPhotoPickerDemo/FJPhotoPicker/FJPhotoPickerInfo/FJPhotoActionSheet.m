@@ -365,8 +365,12 @@ static char RelatedKey;
     if (self.arraySelectPhotos.count > 0) {
         [self requestSelPhotos:nil];
     } else {
-        if (![self judgeIsHaveCameraAuthority]) {
+        if (![self judgeIsHaveCameraAuthority] || ![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
             NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserNoCameraAuthorityText"], [[NSBundle mainBundle].infoDictionary valueForKey:(__bridge NSString *)kCFBundleNameKey]];
+            if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+                message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"ZLPhotoBrowserCannotUseCameraInSimulatorText"], [[NSBundle mainBundle].infoDictionary valueForKey:(__bridge NSString *)kCFBundleNameKey]];
+
+            }
             [self showAlertWithTitle:nil message:message];
             [self hide];
             return;

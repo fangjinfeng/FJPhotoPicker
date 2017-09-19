@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.source       = { :git => "https://github.com/fangjinfeng/FJPhotoPicker.git", :tag => "0.0.1" }
   s.source_files = "FJPhotoPicker/**/*.{h,m,xib}"
-  s.resources    = "FJPhotoPicker/Resourse/*.{png,bundle}"
+  s.resources    = "FJPhotoPicker/Resources/*.{png,bundle}"
   s.requires_arc = true
   s.framework  = 'UIKit'
 end

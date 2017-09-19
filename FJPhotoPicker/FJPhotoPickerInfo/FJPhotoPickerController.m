@@ -529,7 +529,7 @@ static CGFloat itemMargin = 5;
         NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
         if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserNoCameraAuthorityText"],appName];
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCannotUseCamera"] message:message delegate:self cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"] otherButtonTitles:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSettingText"], nil];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCannotUseCameraText"] message:message delegate:self cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"] otherButtonTitles:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSettingText"], nil];
         [alert show];
     } else if (authStatus == AVAuthorizationStatusNotDetermined) {
         // fix issue 466, 防止用户首次拍照拒绝授权时相机页黑屏

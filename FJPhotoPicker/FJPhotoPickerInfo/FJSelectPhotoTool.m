@@ -20,7 +20,7 @@
     UIViewController *tmpCurrentViewController = [UIViewController fj_currentViewController];
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *albumPicker = [UIAlertAction actionWithTitle:@"手机相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *albumPicker = [UIAlertAction actionWithTitle:kFJLocalizaedStringForKey(@"FJPhotoBrowserSelectFromPhoneAlbumText") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         FJPhotoActionSheet *actionSheet = [[FJPhotoActionSheet alloc] init];
         //设置照片最大选择数
         actionSheet.maxSelectCount = 1;
@@ -33,7 +33,7 @@
         }];
     }];
     
-    UIAlertAction *takePhoto = [UIAlertAction actionWithTitle:@"拍一张图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *takePhoto = [UIAlertAction actionWithTitle:kFJLocalizaedStringForKey(@"FJPhotoBrowserCameraText") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         FJPhotoActionSheet *actionSheet = [[FJPhotoActionSheet alloc] init];
         [actionSheet showSystemCamaraWithSender:tmpCurrentViewController lastSelectPhotoModels:nil completion:^(NSArray<UIImage *> * _Nonnull selectPhotos, NSArray<FJSelectPhotoModel *> * _Nonnull selectPhotoModels) {
@@ -44,7 +44,7 @@
         }];
     }];
     
-    UIAlertAction *takeCustomPhoto = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *takeCustomPhoto = [UIAlertAction actionWithTitle:kFJLocalizaedStringForKey(@"FJPhotoBrowserSelectFromPhoneAlbumText") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         FJPhotoActionSheet *actionSheet = [[FJPhotoActionSheet alloc] init];
         //设置照片最大选择数
         actionSheet.maxSelectCount = 9;
@@ -59,7 +59,7 @@
     }];
     
     
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:kFJLocalizaedStringForKey(@"FJPhotoBrowserCancelText") style:UIAlertActionStyleCancel handler:nil];
     
      // 来自 手机 系统 相册 和 相机
     if (selectPhotoType == FJSelectPhotoFromTypeSystemAlbumAndCamera) {

@@ -11,7 +11,7 @@
 
 
 #import <UIKit/UIKit.h>
-
+#import "NSBundle+FJImagePicker.h"
 
 // 最大 选择 图片 数
 #define kMaxLimitSelectPhotoNum 9
@@ -40,6 +40,9 @@
 
 // 按钮 字体 不可选中 颜色
 #define kFJPhotoNavigationBarTintColor kRGB(34, 34, 34)
+
+// 国际化
+#define kFJLocalizaedStringForKey(a) [NSBundle tz_localizedStringForKey:a]
 
 
 ///////ZLBigImageCell 不建议设置太大，太大的话会导致图片加载过慢

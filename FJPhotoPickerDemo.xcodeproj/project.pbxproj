@@ -240,6 +240,7 @@
 		30883E521F70A98200019D3A /* FJPhotoPickerInfo */ = {
 			isa = PBXGroup;
 			children = (
+				30883E5C1F70A98200019D3A /* FJDefine.h */,
 				30883E531F70A98200019D3A /* FJAlbumPickerController.h */,
 				30883E541F70A98200019D3A /* FJAlbumPickerController.m */,
 				30883E551F70A98200019D3A /* FJAssetCell.h */,
@@ -249,7 +250,6 @@
 				30883E591F70A98200019D3A /* FJCollectionCell.h */,
 				30883E5A1F70A98200019D3A /* FJCollectionCell.m */,
 				30883E5B1F70A98200019D3A /* FJCollectionCell.xib */,
-				30883E5C1F70A98200019D3A /* FJDefine.h */,
 				30883E5D1F70A98200019D3A /* FJGifPhotoPreviewController.h */,
 				30883E5E1F70A98200019D3A /* FJGifPhotoPreviewController.m */,
 				30883E5F1F70A98200019D3A /* FJImageCropManager.h */,

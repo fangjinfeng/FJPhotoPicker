@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FJPhotoPicker"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "图片选择器:一句话集成系统相册、拍照、手机相册等选取图片"
   s.homepage     = "http://www.jianshu.com/p/bea2bfed3f3f"
  s.license      = { :type => 'MIT', :file => 'LICENSE' }

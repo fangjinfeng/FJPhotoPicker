@@ -20,16 +20,13 @@
 		30883E8B1F70A98200019D3A /* FJAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E561F70A98200019D3A /* FJAssetCell.m */; };
 		30883E8C1F70A98200019D3A /* FJAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E581F70A98200019D3A /* FJAssetModel.m */; };
 		30883E8D1F70A98200019D3A /* FJCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E5A1F70A98200019D3A /* FJCollectionCell.m */; };
-		30883E8E1F70A98200019D3A /* FJCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30883E5B1F70A98200019D3A /* FJCollectionCell.xib */; };
 		30883E8F1F70A98200019D3A /* FJGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E5E1F70A98200019D3A /* FJGifPhotoPreviewController.m */; };
 		30883E901F70A98200019D3A /* FJImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E601F70A98200019D3A /* FJImageCropManager.m */; };
 		30883E911F70A98200019D3A /* FJImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E621F70A98200019D3A /* FJImageManager.m */; };
 		30883E921F70A98200019D3A /* FJImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E641F70A98200019D3A /* FJImagePickerController.m */; };
 		30883E931F70A98200019D3A /* FJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E661F70A98200019D3A /* FJLocationManager.m */; };
 		30883E941F70A98200019D3A /* FJNoAuthorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E681F70A98200019D3A /* FJNoAuthorityViewController.m */; };
-		30883E951F70A98200019D3A /* FJNoAuthorityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30883E691F70A98200019D3A /* FJNoAuthorityViewController.xib */; };
 		30883E961F70A98200019D3A /* FJPhotoActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E6B1F70A98200019D3A /* FJPhotoActionSheet.m */; };
-		30883E971F70A98200019D3A /* FJPhotoActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30883E6C1F70A98200019D3A /* FJPhotoActionSheet.xib */; };
 		30883E981F70A98200019D3A /* FJPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E6E1F70A98200019D3A /* FJPhotoPickerController.m */; };
 		30883E991F70A98200019D3A /* FJPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E701F70A98200019D3A /* FJPhotoPreviewCell.m */; };
 		30883E9A1F70A98200019D3A /* FJPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E721F70A98200019D3A /* FJPhotoPreviewController.m */; };
@@ -45,12 +42,15 @@
 		30883EA41F70A98200019D3A /* btn_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30883E861F70A98200019D3A /* btn_selected@2x.png */; };
 		30883EA51F70A98200019D3A /* btn_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30883E871F70A98200019D3A /* btn_unselected@2x.png */; };
 		30883EA61F70A98200019D3A /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 30883E881F70A98200019D3A /* lock.png */; };
-		30883EA71F70A98200019D3A /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30883E891F70A98200019D3A /* TZImagePickerController.bundle */; };
+		30883EA71F70A98200019D3A /* FJImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30883E891F70A98200019D3A /* FJImagePickerController.bundle */; };
 		30883EBE1F70C8A700019D3A /* FJPhotoPicker-Album.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EB91F70C8A700019D3A /* FJPhotoPicker-Album.gif */; };
 		30883EBF1F70C8A700019D3A /* FJPhotoPicker-Camera.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBA1F70C8A700019D3A /* FJPhotoPicker-Camera.gif */; };
 		30883EC01F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBB1F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif */; };
 		30883EC11F70C8A700019D3A /* FJPhotoPicker-Preview.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBC1F70C8A700019D3A /* FJPhotoPicker-Preview.gif */; };
 		30883EC21F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBD1F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif */; };
+		308FFFEB1F7E24FB003CE28E /* FJCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFE81F7E24D8003CE28E /* FJCollectionCell.xib */; };
+		308FFFEC1F7E24FB003CE28E /* FJPhotoActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFEA1F7E24E4003CE28E /* FJPhotoActionSheet.xib */; };
+		308FFFED1F7E24FB003CE28E /* FJNoAuthorityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFE91F7E24DF003CE28E /* FJNoAuthorityViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +96,6 @@
 		30883E581F70A98200019D3A /* FJAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJAssetModel.m; sourceTree = "<group>"; };
 		30883E591F70A98200019D3A /* FJCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCollectionCell.h; sourceTree = "<group>"; };
 		30883E5A1F70A98200019D3A /* FJCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCollectionCell.m; sourceTree = "<group>"; };
-		30883E5B1F70A98200019D3A /* FJCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJCollectionCell.xib; sourceTree = "<group>"; };
 		30883E5C1F70A98200019D3A /* FJDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJDefine.h; sourceTree = "<group>"; };
 		30883E5D1F70A98200019D3A /* FJGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJGifPhotoPreviewController.h; sourceTree = "<group>"; };
 		30883E5E1F70A98200019D3A /* FJGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJGifPhotoPreviewController.m; sourceTree = "<group>"; };
@@ -110,10 +109,8 @@
 		30883E661F70A98200019D3A /* FJLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJLocationManager.m; sourceTree = "<group>"; };
 		30883E671F70A98200019D3A /* FJNoAuthorityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJNoAuthorityViewController.h; sourceTree = "<group>"; };
 		30883E681F70A98200019D3A /* FJNoAuthorityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJNoAuthorityViewController.m; sourceTree = "<group>"; };
-		30883E691F70A98200019D3A /* FJNoAuthorityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJNoAuthorityViewController.xib; sourceTree = "<group>"; };
 		30883E6A1F70A98200019D3A /* FJPhotoActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoActionSheet.h; sourceTree = "<group>"; };
 		30883E6B1F70A98200019D3A /* FJPhotoActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoActionSheet.m; sourceTree = "<group>"; };
-		30883E6C1F70A98200019D3A /* FJPhotoActionSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FJPhotoActionSheet.xib; sourceTree = "<group>"; };
 		30883E6D1F70A98200019D3A /* FJPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoPickerController.h; sourceTree = "<group>"; };
 		30883E6E1F70A98200019D3A /* FJPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJPhotoPickerController.m; sourceTree = "<group>"; };
 		30883E6F1F70A98200019D3A /* FJPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJPhotoPreviewCell.h; sourceTree = "<group>"; };
@@ -141,12 +138,15 @@
 		30883E861F70A98200019D3A /* btn_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_selected@2x.png"; sourceTree = "<group>"; };
 		30883E871F70A98200019D3A /* btn_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_unselected@2x.png"; sourceTree = "<group>"; };
 		30883E881F70A98200019D3A /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
-		30883E891F70A98200019D3A /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		30883E891F70A98200019D3A /* FJImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FJImagePickerController.bundle; sourceTree = "<group>"; };
 		30883EB91F70C8A700019D3A /* FJPhotoPicker-Album.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Album.gif"; sourceTree = "<group>"; };
 		30883EBA1F70C8A700019D3A /* FJPhotoPicker-Camera.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Camera.gif"; sourceTree = "<group>"; };
 		30883EBB1F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-NoAuthorization.gif"; sourceTree = "<group>"; };
 		30883EBC1F70C8A700019D3A /* FJPhotoPicker-Preview.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Preview.gif"; sourceTree = "<group>"; };
 		30883EBD1F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-SystemAlbum.gif"; sourceTree = "<group>"; };
+		308FFFE81F7E24D8003CE28E /* FJCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJCollectionCell.xib; sourceTree = "<group>"; };
+		308FFFE91F7E24DF003CE28E /* FJNoAuthorityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJNoAuthorityViewController.xib; sourceTree = "<group>"; };
+		308FFFEA1F7E24E4003CE28E /* FJPhotoActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJPhotoActionSheet.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +260,6 @@
 				30883E581F70A98200019D3A /* FJAssetModel.m */,
 				30883E591F70A98200019D3A /* FJCollectionCell.h */,
 				30883E5A1F70A98200019D3A /* FJCollectionCell.m */,
-				30883E5B1F70A98200019D3A /* FJCollectionCell.xib */,
 				30883E5D1F70A98200019D3A /* FJGifPhotoPreviewController.h */,
 				30883E5E1F70A98200019D3A /* FJGifPhotoPreviewController.m */,
 				30883E5F1F70A98200019D3A /* FJImageCropManager.h */,
@@ -273,10 +272,8 @@
 				30883E661F70A98200019D3A /* FJLocationManager.m */,
 				30883E671F70A98200019D3A /* FJNoAuthorityViewController.h */,
 				30883E681F70A98200019D3A /* FJNoAuthorityViewController.m */,
-				30883E691F70A98200019D3A /* FJNoAuthorityViewController.xib */,
 				30883E6A1F70A98200019D3A /* FJPhotoActionSheet.h */,
 				30883E6B1F70A98200019D3A /* FJPhotoActionSheet.m */,
-				30883E6C1F70A98200019D3A /* FJPhotoActionSheet.xib */,
 				30883E6D1F70A98200019D3A /* FJPhotoPickerController.h */,
 				30883E6E1F70A98200019D3A /* FJPhotoPickerController.m */,
 				30883E6F1F70A98200019D3A /* FJPhotoPreviewCell.h */,
@@ -308,10 +305,13 @@
 		30883E851F70A98200019D3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				308FFFE81F7E24D8003CE28E /* FJCollectionCell.xib */,
+				308FFFEA1F7E24E4003CE28E /* FJPhotoActionSheet.xib */,
+				308FFFE91F7E24DF003CE28E /* FJNoAuthorityViewController.xib */,
 				30883E861F70A98200019D3A /* btn_selected@2x.png */,
 				30883E871F70A98200019D3A /* btn_unselected@2x.png */,
 				30883E881F70A98200019D3A /* lock.png */,
-				30883E891F70A98200019D3A /* TZImagePickerController.bundle */,
+				30883E891F70A98200019D3A /* FJImagePickerController.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -435,12 +435,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30883E971F70A98200019D3A /* FJPhotoActionSheet.xib in Resources */,
+				308FFFEB1F7E24FB003CE28E /* FJCollectionCell.xib in Resources */,
+				308FFFEC1F7E24FB003CE28E /* FJPhotoActionSheet.xib in Resources */,
+				308FFFED1F7E24FB003CE28E /* FJNoAuthorityViewController.xib in Resources */,
 				30883EC11F70C8A700019D3A /* FJPhotoPicker-Preview.gif in Resources */,
-				30883E8E1F70A98200019D3A /* FJCollectionCell.xib in Resources */,
-				30883E951F70A98200019D3A /* FJNoAuthorityViewController.xib in Resources */,
 				3015BBAA1F6FF509007A7035 /* TestViewController.xib in Resources */,
-				30883EA71F70A98200019D3A /* TZImagePickerController.bundle in Resources */,
+				30883EA71F70A98200019D3A /* FJImagePickerController.bundle in Resources */,
 				30883EBE1F70C8A700019D3A /* FJPhotoPicker-Album.gif in Resources */,
 				30883EA41F70A98200019D3A /* btn_selected@2x.png in Resources */,
 				3015BB2D1F6FF03F007A7035 /* LaunchScreen.storyboard in Resources */,

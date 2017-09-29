@@ -13,7 +13,7 @@
 
 + (NSBundle *)tz_imagePickerBundle {
     NSBundle *bundle = [NSBundle bundleForClass:[FJImagePickerController class]];
-    NSURL *url = [bundle URLForResource:@"TZImagePickerController" withExtension:@"bundle"];
+    NSURL *url = [bundle URLForResource:@"FJImagePickerController" withExtension:@"bundle"];
     bundle = [NSBundle bundleWithURL:url];
     return bundle;
 }

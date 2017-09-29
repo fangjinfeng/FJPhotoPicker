@@ -2,8 +2,8 @@
 //  TZProgressView.m
 //  TZImagePickerController
 //
-//  Created by ttouch on 2016/12/6.
-//  Copyright © 2016年 谭真. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //
 
 #import "FJProgressView.h"

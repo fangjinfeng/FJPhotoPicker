@@ -1,9 +1,9 @@
 //
-//  ToastUtils.m
+//  FJToastUtils.m
 //  vsfa
 //
-//  Created by long on 15/7/29.
-//  Copyright © 2015年 long. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //
 
 #import "FJToastUtils.h"

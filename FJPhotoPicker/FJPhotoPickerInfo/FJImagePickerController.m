@@ -2,10 +2,8 @@
 //  TZImagePickerController.m
 //  TZImagePickerController
 //
-//  Created by 谭真 on 15/12/24.
-//  Copyright © 2015年 谭真. All rights reserved.
-//  version 1.8.7 - 2017.07.28
-//  更多信息，请前往项目的github地址：https://github.com/banchichen/TZImagePickerController
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 
 #import "FJDefine.h"
 #import "FJAssetModel.h"

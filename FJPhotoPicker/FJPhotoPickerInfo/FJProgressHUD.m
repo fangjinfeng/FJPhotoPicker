@@ -2,8 +2,8 @@
 //  ZLProgressHUD.m
 //  FJPhotoBrowser
 //
-//  Created by long on 16/2/15.
-//  Copyright © 2016年 long. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //
 
 #import "FJDefine.h"

@@ -2,8 +2,8 @@
 //  TZLocationManager.m
 //  TZImagePickerController
 //
-//  Created by 谭真 on 2017/06/03.
-//  Copyright © 2017年 谭真. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //  定位管理类
 
 #import "FJLocationManager.h"

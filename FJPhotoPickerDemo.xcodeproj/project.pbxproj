@@ -39,18 +39,18 @@
 		30883EA11F70A98200019D3A /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E801F70A98200019D3A /* ToastUtils.m */; };
 		30883EA21F70A98200019D3A /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E821F70A98200019D3A /* UIView+Layout.m */; };
 		30883EA31F70A98200019D3A /* UIViewController+FJCurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E841F70A98200019D3A /* UIViewController+FJCurrentViewController.m */; };
-		30883EA41F70A98200019D3A /* btn_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30883E861F70A98200019D3A /* btn_selected@2x.png */; };
-		30883EA51F70A98200019D3A /* btn_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30883E871F70A98200019D3A /* btn_unselected@2x.png */; };
-		30883EA61F70A98200019D3A /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 30883E881F70A98200019D3A /* lock.png */; };
-		30883EA71F70A98200019D3A /* FJImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30883E891F70A98200019D3A /* FJImagePickerController.bundle */; };
 		30883EBE1F70C8A700019D3A /* FJPhotoPicker-Album.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EB91F70C8A700019D3A /* FJPhotoPicker-Album.gif */; };
 		30883EBF1F70C8A700019D3A /* FJPhotoPicker-Camera.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBA1F70C8A700019D3A /* FJPhotoPicker-Camera.gif */; };
 		30883EC01F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBB1F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif */; };
 		30883EC11F70C8A700019D3A /* FJPhotoPicker-Preview.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBC1F70C8A700019D3A /* FJPhotoPicker-Preview.gif */; };
 		30883EC21F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBD1F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif */; };
-		308FFFEB1F7E24FB003CE28E /* FJCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFE81F7E24D8003CE28E /* FJCollectionCell.xib */; };
-		308FFFEC1F7E24FB003CE28E /* FJPhotoActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFEA1F7E24E4003CE28E /* FJPhotoActionSheet.xib */; };
-		308FFFED1F7E24FB003CE28E /* FJNoAuthorityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFE91F7E24DF003CE28E /* FJNoAuthorityViewController.xib */; };
+		308F00031F7E3B08003CE28E /* btn_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFFC1F7E3AE4003CE28E /* btn_selected@2x.png */; };
+		308F00041F7E3B08003CE28E /* btn_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFFD1F7E3AE4003CE28E /* btn_unselected@2x.png */; };
+		308F00051F7E3B08003CE28E /* FJCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFFE1F7E3AE4003CE28E /* FJCollectionCell.xib */; };
+		308F00061F7E3B08003CE28E /* FJNoAuthorityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308FFFFF1F7E3AE4003CE28E /* FJNoAuthorityViewController.xib */; };
+		308F00071F7E3B08003CE28E /* FJPhotoActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F00001F7E3AE4003CE28E /* FJPhotoActionSheet.xib */; };
+		308F00081F7E3B08003CE28E /* FJPhotoPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308F00011F7E3AE4003CE28E /* FJPhotoPicker.bundle */; };
+		308F00091F7E3B08003CE28E /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 308F00021F7E3AE4003CE28E /* lock.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,18 +135,18 @@
 		30883E821F70A98200019D3A /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		30883E831F70A98200019D3A /* UIViewController+FJCurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FJCurrentViewController.h"; sourceTree = "<group>"; };
 		30883E841F70A98200019D3A /* UIViewController+FJCurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FJCurrentViewController.m"; sourceTree = "<group>"; };
-		30883E861F70A98200019D3A /* btn_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_selected@2x.png"; sourceTree = "<group>"; };
-		30883E871F70A98200019D3A /* btn_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_unselected@2x.png"; sourceTree = "<group>"; };
-		30883E881F70A98200019D3A /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
-		30883E891F70A98200019D3A /* FJImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FJImagePickerController.bundle; sourceTree = "<group>"; };
 		30883EB91F70C8A700019D3A /* FJPhotoPicker-Album.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Album.gif"; sourceTree = "<group>"; };
 		30883EBA1F70C8A700019D3A /* FJPhotoPicker-Camera.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Camera.gif"; sourceTree = "<group>"; };
 		30883EBB1F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-NoAuthorization.gif"; sourceTree = "<group>"; };
 		30883EBC1F70C8A700019D3A /* FJPhotoPicker-Preview.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Preview.gif"; sourceTree = "<group>"; };
 		30883EBD1F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-SystemAlbum.gif"; sourceTree = "<group>"; };
-		308FFFE81F7E24D8003CE28E /* FJCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJCollectionCell.xib; sourceTree = "<group>"; };
-		308FFFE91F7E24DF003CE28E /* FJNoAuthorityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJNoAuthorityViewController.xib; sourceTree = "<group>"; };
-		308FFFEA1F7E24E4003CE28E /* FJPhotoActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJPhotoActionSheet.xib; sourceTree = "<group>"; };
+		308F00001F7E3AE4003CE28E /* FJPhotoActionSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJPhotoActionSheet.xib; sourceTree = "<group>"; };
+		308F00011F7E3AE4003CE28E /* FJPhotoPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FJPhotoPicker.bundle; sourceTree = "<group>"; };
+		308F00021F7E3AE4003CE28E /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		308FFFFC1F7E3AE4003CE28E /* btn_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_selected@2x.png"; sourceTree = "<group>"; };
+		308FFFFD1F7E3AE4003CE28E /* btn_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_unselected@2x.png"; sourceTree = "<group>"; };
+		308FFFFE1F7E3AE4003CE28E /* FJCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJCollectionCell.xib; sourceTree = "<group>"; };
+		308FFFFF1F7E3AE4003CE28E /* FJNoAuthorityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FJNoAuthorityViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				30883E521F70A98200019D3A /* FJPhotoPickerInfo */,
-				30883E851F70A98200019D3A /* Resources */,
+				308FFFFB1F7E3AE4003CE28E /* Resources */,
 			);
 			path = FJPhotoPicker;
 			sourceTree = "<group>";
@@ -302,20 +302,6 @@
 			path = FJPhotoPickerInfo;
 			sourceTree = "<group>";
 		};
-		30883E851F70A98200019D3A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				308FFFE81F7E24D8003CE28E /* FJCollectionCell.xib */,
-				308FFFEA1F7E24E4003CE28E /* FJPhotoActionSheet.xib */,
-				308FFFE91F7E24DF003CE28E /* FJNoAuthorityViewController.xib */,
-				30883E861F70A98200019D3A /* btn_selected@2x.png */,
-				30883E871F70A98200019D3A /* btn_unselected@2x.png */,
-				30883E881F70A98200019D3A /* lock.png */,
-				30883E891F70A98200019D3A /* FJImagePickerController.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		30883EB81F70C8A700019D3A /* Snapshots */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +312,20 @@
 				30883EBD1F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif */,
 			);
 			path = Snapshots;
+			sourceTree = "<group>";
+		};
+		308FFFFB1F7E3AE4003CE28E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				308F00021F7E3AE4003CE28E /* lock.png */,
+				308FFFFC1F7E3AE4003CE28E /* btn_selected@2x.png */,
+				308FFFFD1F7E3AE4003CE28E /* btn_unselected@2x.png */,
+				308FFFFE1F7E3AE4003CE28E /* FJCollectionCell.xib */,
+				308FFFFF1F7E3AE4003CE28E /* FJNoAuthorityViewController.xib */,
+				308F00001F7E3AE4003CE28E /* FJPhotoActionSheet.xib */,
+				308F00011F7E3AE4003CE28E /* FJPhotoPicker.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,18 +435,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308FFFEB1F7E24FB003CE28E /* FJCollectionCell.xib in Resources */,
-				308FFFEC1F7E24FB003CE28E /* FJPhotoActionSheet.xib in Resources */,
-				308FFFED1F7E24FB003CE28E /* FJNoAuthorityViewController.xib in Resources */,
+				308F00031F7E3B08003CE28E /* btn_selected@2x.png in Resources */,
+				308F00041F7E3B08003CE28E /* btn_unselected@2x.png in Resources */,
+				308F00051F7E3B08003CE28E /* FJCollectionCell.xib in Resources */,
+				308F00061F7E3B08003CE28E /* FJNoAuthorityViewController.xib in Resources */,
+				308F00071F7E3B08003CE28E /* FJPhotoActionSheet.xib in Resources */,
+				308F00081F7E3B08003CE28E /* FJPhotoPicker.bundle in Resources */,
+				308F00091F7E3B08003CE28E /* lock.png in Resources */,
 				30883EC11F70C8A700019D3A /* FJPhotoPicker-Preview.gif in Resources */,
 				3015BBAA1F6FF509007A7035 /* TestViewController.xib in Resources */,
-				30883EA71F70A98200019D3A /* FJImagePickerController.bundle in Resources */,
 				30883EBE1F70C8A700019D3A /* FJPhotoPicker-Album.gif in Resources */,
-				30883EA41F70A98200019D3A /* btn_selected@2x.png in Resources */,
 				3015BB2D1F6FF03F007A7035 /* LaunchScreen.storyboard in Resources */,
-				30883EA61F70A98200019D3A /* lock.png in Resources */,
 				3015BB2A1F6FF03F007A7035 /* Assets.xcassets in Resources */,
-				30883EA51F70A98200019D3A /* btn_unselected@2x.png in Resources */,
 				30883EC21F70C8A700019D3A /* FJPhotoPicker-SystemAlbum.gif in Resources */,
 				3015BB281F6FF03F007A7035 /* Main.storyboard in Resources */,
 				30883EC01F70C8A700019D3A /* FJPhotoPicker-NoAuthorization.gif in Resources */,

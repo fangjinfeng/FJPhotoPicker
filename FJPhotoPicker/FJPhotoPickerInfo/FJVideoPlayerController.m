@@ -8,7 +8,7 @@
 
 #import "FJVideoPlayerController.h"
 #import <MediaPlayer/MediaPlayer.h>
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImageManager.h"
 #import "FJAssetModel.h"
 #import "FJImagePickerController.h"
@@ -107,7 +107,7 @@
         [_doneButton setTitle:tzImagePickerVc.doneBtnTitleStr forState:UIControlStateNormal];
         [_doneButton setTitleColor:tzImagePickerVc.oKButtonTitleColorNormal forState:UIControlStateNormal];
     } else {
-        [_doneButton setTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserDoneText"] forState:UIControlStateNormal];
+        [_doneButton setTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserDoneText"] forState:UIControlStateNormal];
         [_doneButton setTitleColor:[UIColor colorWithRed:(83/255.0) green:(179/255.0) blue:(17/255.0) alpha:1.0] forState:UIControlStateNormal];
     }
     [_toolBar addSubview:_doneButton];
@@ -120,9 +120,9 @@
     [super viewDidLayoutSubviews];
     
     _playerLayer.frame = self.view.bounds;
-    _playButton.frame = CGRectMake(0, 64, self.view.tz_width, self.view.tz_height - 64 - 44);
-    _doneButton.frame = CGRectMake(self.view.tz_width - 44 - 12, 0, 44, 44);
-    _toolBar.frame = CGRectMake(0, self.view.tz_height - 44, self.view.tz_width, 44);
+    _playButton.frame = CGRectMake(0, 64, self.view.fj_width, self.view.fj_height - 64 - 44);
+    _doneButton.frame = CGRectMake(self.view.fj_width - 44 - 12, 0, 44, 44);
+    _toolBar.frame = CGRectMake(0, self.view.fj_height - 44, self.view.fj_width, 44);
 }
 
 #pragma mark - Click Event
@@ -136,7 +136,7 @@
         [self.navigationController setNavigationBarHidden:YES];
         _toolBar.hidden = YES;
         [_playButton setImage:nil forState:UIControlStateNormal];
-        if (!TZ_isGlobalHideStatusBar) {
+        if (!fj_isGlobalHideStatusBar) {
             if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = YES;
         }
     } else {
@@ -177,7 +177,7 @@
     [self.navigationController setNavigationBarHidden:NO];
     [_playButton setImage:[UIImage imageNamedFromMyBundle:@"MMVideoPreviewPlay"] forState:UIControlStateNormal];
     
-    if (!TZ_isGlobalHideStatusBar) {
+    if (!fj_isGlobalHideStatusBar) {
         if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = NO;
     }
 }

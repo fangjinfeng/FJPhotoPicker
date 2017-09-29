@@ -8,7 +8,7 @@
 
 
 #import "FJDefine.h"
-#import "ToastUtils.h"
+#import "FJToastUtils.h"
 #import "FJPhotoTool.h"
 #import "FJAssetModel.h"
 #import "FJProgressHUD.h"
@@ -98,9 +98,9 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos, NSArray<PHAsset *> *se
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [self.btnCamera setTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCameraText"] forState:UIControlStateNormal];
-    [self.btnAblum setTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserAblumText"] forState:UIControlStateNormal];
-    [self.btnCancel setTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"] forState:UIControlStateNormal];
+    [self.btnCamera setTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCameraText"] forState:UIControlStateNormal];
+    [self.btnAblum setTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserAblumText"] forState:UIControlStateNormal];
+    [self.btnCancel setTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCancelText"] forState:UIControlStateNormal];
     [self resetSubViewState];
 }
 
@@ -288,7 +288,7 @@ static char RelatedKey;
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserOKText"] style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:action];
     [self.sender presentViewController:alert animated:YES completion:nil];
 }
@@ -366,9 +366,9 @@ static char RelatedKey;
         [self requestSelPhotos:nil];
     } else {
         if (![self judgeIsHaveCameraAuthority] || ![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-            NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserNoCameraAuthorityText"], [[NSBundle mainBundle].infoDictionary valueForKey:(__bridge NSString *)kCFBundleNameKey]];
+            NSString *message = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserNoCameraAuthorityText"], [[NSBundle mainBundle].infoDictionary valueForKey:(__bridge NSString *)kCFBundleNameKey]];
             if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-                message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCannotUseCameraInSimulatorText"], [[NSBundle mainBundle].infoDictionary valueForKey:(__bridge NSString *)kCFBundleNameKey]];
+                message = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCannotUseCameraInSimulatorText"], [[NSBundle mainBundle].infoDictionary valueForKey:(__bridge NSString *)kCFBundleNameKey]];
 
             }
             [self showAlertWithTitle:nil message:message];
@@ -443,7 +443,7 @@ static char RelatedKey;
 {
     if (_arraySelectPhotos.count >= self.maxSelectCount
         && btn.selected == NO) {
-        ShowToastLong([NSBundle tz_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], self.maxSelectCount);
+        ShowToastLong([NSBundle fj_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], self.maxSelectCount);
         return;
     }
     
@@ -453,7 +453,7 @@ static char RelatedKey;
     if (!btn.selected) {
         [btn.layer addAnimation:GetBtnStatusChangedAnimation() forKey:nil];
         if (![[FJPhotoTool sharePhotoTool] judgeAssetisInLocalAblum:asset]) {
-            ShowToastLong(@"%@", [NSBundle tz_localizedStringForKey:@"FJPhotoBrowseriCloudPhotoText"]);
+            ShowToastLong(@"%@", [NSBundle fj_localizedStringForKey:@"FJPhotoBrowseriCloudPhotoText"]);
             return;
         }
         FJAssetModel *model = [[FJAssetModel alloc] init];
@@ -475,10 +475,10 @@ static char RelatedKey;
 - (void)changeBtnCameraTitle
 {
     if (self.arraySelectPhotos.count > 0) {
-        [self.btnCamera setTitle:[NSString stringWithFormat:@"%@(%ld)", [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserDoneText"], self.arraySelectPhotos.count] forState:UIControlStateNormal];
+        [self.btnCamera setTitle:[NSString stringWithFormat:@"%@(%ld)", [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserDoneText"], self.arraySelectPhotos.count] forState:UIControlStateNormal];
         [self.btnCamera setTitleColor:kFJPhotoButtonTitleNormalColor forState:UIControlStateNormal];
     } else {
-        [self.btnCamera setTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCameraText"] forState:UIControlStateNormal];
+        [self.btnCamera setTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCameraText"] forState:UIControlStateNormal];
         [self.btnCamera setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
 }
@@ -650,7 +650,7 @@ static char RelatedKey;
                     if (suc) {
                         strongSelf.handler(@[[strongSelf scaleImage:image]], @[asset]);
                     } else {
-                        ShowToastLong(@"%@", [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSaveImageErrorText"]);
+                        ShowToastLong(@"%@", [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSaveImageErrorText"]);
                     }
                     [hud hide];
                     [strongSelf hide];
@@ -676,7 +676,7 @@ static char RelatedKey;
                     if (suc) {
                         strongSelf.handler(@[[strongSelf scaleImage:image]], @[asset]);
                     } else {
-                        ShowToastLong(@"%@", [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSaveImageErrorText"]);
+                        ShowToastLong(@"%@", [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSaveImageErrorText"]);
                     }
                     [hud hide];
                     [strongSelf hide];

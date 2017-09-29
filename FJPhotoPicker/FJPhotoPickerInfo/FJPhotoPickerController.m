@@ -11,7 +11,7 @@
 #import "FJPhotoPreviewController.h"
 #import "FJAssetCell.h"
 #import "FJAssetModel.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImageManager.h"
 #import "FJVideoPlayerController.h"
 #import "FJGifPhotoPreviewController.h"
@@ -159,9 +159,9 @@ static CGFloat itemMargin = 5;
     _collectionView.contentInset = UIEdgeInsetsMake(itemMargin, itemMargin, itemMargin, itemMargin);
     
     if (_showTakePhotoBtn && tzImagePickerVc.allowTakePicture ) {
-        _collectionView.contentSize = CGSizeMake(self.view.tz_width, ((_model.count + self.columnNumber) / self.columnNumber) * self.view.tz_width);
+        _collectionView.contentSize = CGSizeMake(self.view.fj_width, ((_model.count + self.columnNumber) / self.columnNumber) * self.view.fj_width);
     } else {
-        _collectionView.contentSize = CGSizeMake(self.view.tz_width, ((_model.count + self.columnNumber - 1) / self.columnNumber) * self.view.tz_width);
+        _collectionView.contentSize = CGSizeMake(self.view.fj_width, ((_model.count + self.columnNumber - 1) / self.columnNumber) * self.view.fj_width);
     }
     [self.view addSubview:_collectionView];
     [_collectionView registerClass:[FJAssetCell class] forCellWithReuseIdentifier:@"FJAssetCell"];
@@ -250,17 +250,17 @@ static CGFloat itemMargin = 5;
     
     CGFloat top = 0;
     CGFloat collectionViewHeight = 0;
-    CGFloat naviBarHeight = self.navigationController.navigationBar.tz_height;
+    CGFloat naviBarHeight = self.navigationController.navigationBar.fj_height;
     BOOL isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
     if (self.navigationController.navigationBar.isTranslucent) {
         top = naviBarHeight;
         if (iOS7Later && !isStatusBarHidden) top += 20;
-        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.tz_height - 50 - top : self.view.tz_height - top;;
+        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.fj_height - 50 - top : self.view.fj_height - top;;
     } else {
-        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.tz_height - 50 : self.view.tz_height;
+        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.fj_height - 50 : self.view.fj_height;
     }
-    _collectionView.frame = CGRectMake(0, top, self.view.tz_width, collectionViewHeight);
-    CGFloat itemWH = (self.view.tz_width - (self.columnNumber + 1) * itemMargin) / self.columnNumber;
+    _collectionView.frame = CGRectMake(0, top, self.view.fj_width, collectionViewHeight);
+    CGFloat itemWH = (self.view.fj_width - (self.columnNumber + 1) * itemMargin) / self.columnNumber;
     _layout.itemSize = CGSizeMake(itemWH, itemWH);
     _layout.minimumInteritemSpacing = itemMargin;
     _layout.minimumLineSpacing = itemMargin;
@@ -272,28 +272,28 @@ static CGFloat itemMargin = 5;
     
     CGFloat yOffset = 0;
     if (!self.navigationController.navigationBar.isHidden) {
-        yOffset = self.view.tz_height - 50;
+        yOffset = self.view.fj_height - 50;
     } else {
         CGFloat navigationHeight = naviBarHeight;
         if (iOS7Later) navigationHeight += 20;
-        yOffset = self.view.tz_height - 50 - navigationHeight;
+        yOffset = self.view.fj_height - 50 - navigationHeight;
     }
-    _bottomToolBar.frame = CGRectMake(0, yOffset, self.view.tz_width, 50);
+    _bottomToolBar.frame = CGRectMake(0, yOffset, self.view.fj_width, 50);
     CGFloat previewWidth = [tzImagePickerVc.previewBtnTitleStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil].size.width + 2;
     if (!tzImagePickerVc.allowPreview) {
         previewWidth = 0.0;
     }
     _previewButton.frame = CGRectMake(10, 3, previewWidth, 44);
-    _previewButton.tz_width = !tzImagePickerVc.showSelectBtn ? 0 : previewWidth;
+    _previewButton.fj_width = !tzImagePickerVc.showSelectBtn ? 0 : previewWidth;
     if (tzImagePickerVc.allowPickingOriginalPhoto) {
         CGFloat fullImageWidth = [tzImagePickerVc.fullImageBtnTitleStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.width;
-        _originalPhotoButton.frame = CGRectMake(CGRectGetMaxX(_previewButton.frame), self.view.tz_height - 50, fullImageWidth + 56, 50);
+        _originalPhotoButton.frame = CGRectMake(CGRectGetMaxX(_previewButton.frame), self.view.fj_height - 50, fullImageWidth + 56, 50);
         _originalPhotoLabel.frame = CGRectMake(fullImageWidth + 46, 0, 80, 50);
     }
-    _doneButton.frame = CGRectMake(self.view.tz_width - 44 - 12, 3, 44, 44);
-    _numberImageView.frame = CGRectMake(self.view.tz_width - 56 - 28, 10, 30, 30);
+    _doneButton.frame = CGRectMake(self.view.fj_width - 44 - 12, 3, 44, 44);
+    _numberImageView.frame = CGRectMake(self.view.fj_width - 56 - 28, 10, 30, 30);
     _numberLabel.frame = _numberImageView.frame;
-    _divideLine.frame = CGRectMake(0, 0, self.view.tz_width, 1);
+    _divideLine.frame = CGRectMake(0, 0, self.view.fj_width, 1);
     
     [FJImageManager manager].columnNumber = [FJImageManager manager].columnNumber;
     [self.collectionView reloadData];
@@ -323,7 +323,7 @@ static CGFloat itemMargin = 5;
     FJImagePickerController *tzImagePickerVc = (FJImagePickerController *)self.navigationController;
     // 1.6.8 判断是否满足最小必选张数的限制
     if (tzImagePickerVc.minImagesCount && tzImagePickerVc.selectedModels.count < tzImagePickerVc.minImagesCount) {
-        NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserMinSelectCountText"], tzImagePickerVc.minImagesCount];
+        NSString *title = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserMinSelectCountText"], tzImagePickerVc.minImagesCount];
         [tzImagePickerVc showAlertWithTitle:title];
         return;
     }
@@ -358,7 +358,7 @@ static CGFloat itemMargin = 5;
             // 如果图片正在从iCloud同步中,提醒用户
             if (progress < 1 && havenotShowAlert && !alertView) {
                 [tzImagePickerVc hideProgressHUD];
-                alertView = [tzImagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSynchronizingPhotosFromiCloudText"]];
+                alertView = [tzImagePickerVc showAlertWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSynchronizingPhotosFromiCloudText"]];
                 havenotShowAlert = NO;
                 return;
             }
@@ -464,7 +464,7 @@ static CGFloat itemMargin = 5;
                 [tzImagePickerVc.selectedModels addObject:model];
                 [weakSelf refreshBottomToolBarStatus];
             } else {
-                NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], tzImagePickerVc.maxImagesCount];
+                NSString *title = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], tzImagePickerVc.maxImagesCount];
                 [tzImagePickerVc showAlertWithTitle:title];
             }
         }
@@ -488,7 +488,7 @@ static CGFloat itemMargin = 5;
     if (model.type == TZAssetModelMediaTypeVideo && !tzImagePickerVc.allowPickingMultipleVideo) {
         if (tzImagePickerVc.selectedModels.count > 0) {
             FJImagePickerController *imagePickerVc = (FJImagePickerController *)self.navigationController;
-            [imagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotChosseVideoWhenPhotoTypeText"]];
+            [imagePickerVc showAlertWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCanNotChosseVideoWhenPhotoTypeText"]];
         } else {
             FJVideoPlayerController *videoPlayerVc = [[FJVideoPlayerController alloc] init];
             videoPlayerVc.model = model;
@@ -497,7 +497,7 @@ static CGFloat itemMargin = 5;
     } else if (model.type == TZAssetModelMediaTypePhotoGif && tzImagePickerVc.allowPickingGif && !tzImagePickerVc.allowPickingMultipleVideo) {
         if (tzImagePickerVc.selectedModels.count > 0) {
             FJImagePickerController *imagePickerVc = (FJImagePickerController *)self.navigationController;
-            [imagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotChosseGifWhenPhotoTypeText"]];
+            [imagePickerVc showAlertWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCanNotChosseGifWhenPhotoTypeText"]];
         } else {
             FJGifPhotoPreviewController *gifPreviewVc = [[FJGifPhotoPreviewController alloc] init];
             gifPreviewVc.model = model;
@@ -528,8 +528,8 @@ static CGFloat itemMargin = 5;
         // 无权限 做一个友好的提示
         NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
         if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
-        NSString *message = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserNoCameraAuthorityText"],appName];
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCannotUseCameraText"] message:message delegate:self cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"] otherButtonTitles:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSettingText"], nil];
+        NSString *message = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserNoCameraAuthorityText"],appName];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCannotUseCameraText"] message:message delegate:self cancelButtonTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCancelText"] otherButtonTitles:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSettingText"], nil];
         [alert show];
     } else if (authStatus == AVAuthorizationStatusNotDetermined) {
         // fix issue 466, 防止用户首次拍照拒绝授权时相机页黑屏
@@ -669,8 +669,8 @@ static CGFloat itemMargin = 5;
             if ([[UIApplication sharedApplication] canOpenURL:privacyUrl]) {
                 [[UIApplication sharedApplication] openURL:privacyUrl];
             } else {
-                NSString *message = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotJumpToPrivacySettingPage"];
-                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles: nil];
+                NSString *message = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCanNotJumpToPrivacySettingPage"];
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles: nil];
                 [alert show];
             }
         }

@@ -7,7 +7,7 @@
 //
 
 #import "FJAssetCell.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImageManager.h"
 #import "FJPhotoPickerController.h"
 #import "FJImagePickerController.h"
@@ -38,14 +38,14 @@
     FJImagePickerController *imagePickerVc = (FJImagePickerController *)self.navigationController;
     [imagePickerVc hideProgressHUD];
     if (imagePickerVc.allowTakePicture) {
-        self.navigationItem.title = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserPhotoText"];
+        self.navigationItem.title = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserPhotoText"];
     } else if (imagePickerVc.allowPickingVideo) {
-        self.navigationItem.title = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserVideoText"];
+        self.navigationItem.title = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserVideoText"];
     }
     
     // 1.6.10 采用微信的方式，只在相册列表页定义backBarButtonItem为返回，其余的顺系统的做法
     if (self.isFirstAppear) {
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserBackText"] style:UIBarButtonItemStylePlain target:nil action:nil];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserBackText"] style:UIBarButtonItemStylePlain target:nil action:nil];
         self.isFirstAppear = NO;
     }
     
@@ -92,16 +92,16 @@
     
     CGFloat top = 0;
     CGFloat tableViewHeight = 0;
-    CGFloat naviBarHeight = self.navigationController.navigationBar.tz_height;
+    CGFloat naviBarHeight = self.navigationController.navigationBar.fj_height;
     BOOL isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
     if (self.navigationController.navigationBar.isTranslucent) {
         top = naviBarHeight;
         if (iOS7Later && !isStatusBarHidden) top += 20;
-        tableViewHeight = self.view.tz_height - top;
+        tableViewHeight = self.view.fj_height - top;
     } else {
-        tableViewHeight = self.view.tz_height;
+        tableViewHeight = self.view.fj_height;
     }
-    _tableView.frame = CGRectMake(0, top, self.view.tz_width, tableViewHeight);
+    _tableView.frame = CGRectMake(0, top, self.view.fj_width, tableViewHeight);
 }
 
 #pragma mark - UITableViewDataSource && Delegate

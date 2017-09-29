@@ -8,7 +8,7 @@
 
 #import "FJPhotoPreviewCell.h"
 #import "FJAssetModel.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImageManager.h"
 #import "FJProgressView.h"
 #import "FJImageCropManager.h"
@@ -158,7 +158,7 @@
             // 再显示gif动图
             [[FJImageManager manager] getOriginalPhotoDataWithAsset:model.asset completion:^(NSData *data, NSDictionary *info, BOOL isDegraded) {
                 if (!isDegraded) {
-                    self.imageView.image = [UIImage sd_tz_animatedGIFWithData:data];
+                    self.imageView.image = [UIImage sd_fj_animatedGIFWithData:data];
                     [self resizeSubviews];
                 }
             }];
@@ -208,26 +208,26 @@
 }
 
 - (void)resizeSubviews {
-    _imageContainerView.tz_origin = CGPointZero;
-    _imageContainerView.tz_width = self.scrollView.tz_width;
+    _imageContainerView.fj_origin = CGPointZero;
+    _imageContainerView.fj_width = self.scrollView.fj_width;
     
     UIImage *image = _imageView.image;
-    if (image.size.height / image.size.width > self.tz_height / self.scrollView.tz_width) {
-        _imageContainerView.tz_height = floor(image.size.height / (image.size.width / self.scrollView.tz_width));
+    if (image.size.height / image.size.width > self.fj_height / self.scrollView.fj_width) {
+        _imageContainerView.fj_height = floor(image.size.height / (image.size.width / self.scrollView.fj_width));
     } else {
-        CGFloat height = image.size.height / image.size.width * self.scrollView.tz_width;
-        if (height < 1 || isnan(height)) height = self.tz_height;
+        CGFloat height = image.size.height / image.size.width * self.scrollView.fj_width;
+        if (height < 1 || isnan(height)) height = self.fj_height;
         height = floor(height);
-        _imageContainerView.tz_height = height;
-        _imageContainerView.tz_centerY = self.tz_height / 2;
+        _imageContainerView.fj_height = height;
+        _imageContainerView.fj_centerY = self.fj_height / 2;
     }
-    if (_imageContainerView.tz_height > self.tz_height && _imageContainerView.tz_height - self.tz_height <= 1) {
-        _imageContainerView.tz_height = self.tz_height;
+    if (_imageContainerView.fj_height > self.fj_height && _imageContainerView.fj_height - self.fj_height <= 1) {
+        _imageContainerView.fj_height = self.fj_height;
     }
-    CGFloat contentSizeH = MAX(_imageContainerView.tz_height, self.tz_height);
-    _scrollView.contentSize = CGSizeMake(self.scrollView.tz_width, contentSizeH);
+    CGFloat contentSizeH = MAX(_imageContainerView.fj_height, self.fj_height);
+    _scrollView.contentSize = CGSizeMake(self.scrollView.fj_width, contentSizeH);
     [_scrollView scrollRectToVisible:self.bounds animated:NO];
-    _scrollView.alwaysBounceVertical = _imageContainerView.tz_height <= self.tz_height ? NO : YES;
+    _scrollView.alwaysBounceVertical = _imageContainerView.fj_height <= self.fj_height ? NO : YES;
     _imageView.frame = _imageContainerView.bounds;
     
     [self refreshScrollViewContentSize];
@@ -251,10 +251,10 @@
     if (_allowCrop) {
         // 1.7.2 如果允许裁剪,需要让图片的任意部分都能在裁剪框内，于是对_scrollView做了如下处理：
         // 1.让contentSize增大(裁剪框右下角的图片部分)
-        CGFloat contentWidthAdd = self.scrollView.tz_width - CGRectGetMaxX(_cropRect);
-        CGFloat contentHeightAdd = (MIN(_imageContainerView.tz_height, self.tz_height) - self.cropRect.size.height) / 2;
+        CGFloat contentWidthAdd = self.scrollView.fj_width - CGRectGetMaxX(_cropRect);
+        CGFloat contentHeightAdd = (MIN(_imageContainerView.fj_height, self.fj_height) - self.cropRect.size.height) / 2;
         CGFloat newSizeW = self.scrollView.contentSize.width + contentWidthAdd;
-        CGFloat newSizeH = MAX(self.scrollView.contentSize.height, self.tz_height) + contentHeightAdd;
+        CGFloat newSizeH = MAX(self.scrollView.contentSize.height, self.fj_height) + contentHeightAdd;
         _scrollView.contentSize = CGSizeMake(newSizeW, newSizeH);
         _scrollView.alwaysBounceVertical = YES;
         // 2.让scrollView新增滑动区域（裁剪框左上角的图片部分）
@@ -268,10 +268,10 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _scrollView.frame = CGRectMake(10, 0, self.tz_width - 20, self.tz_height);
+    _scrollView.frame = CGRectMake(10, 0, self.fj_width - 20, self.fj_height);
     static CGFloat progressWH = 40;
-    CGFloat progressX = (self.tz_width - progressWH) / 2;
-    CGFloat progressY = (self.tz_height - progressWH) / 2;
+    CGFloat progressX = (self.fj_width - progressWH) / 2;
+    CGFloat progressY = (self.fj_height - progressWH) / 2;
     _progressView.frame = CGRectMake(progressX, progressY, progressWH, progressWH);
     
     [self recoverSubviews];
@@ -319,8 +319,8 @@
 #pragma mark - Private
 
 - (void)refreshImageContainerViewCenter {
-    CGFloat offsetX = (_scrollView.tz_width > _scrollView.contentSize.width) ? ((_scrollView.tz_width - _scrollView.contentSize.width) * 0.5) : 0.0;
-    CGFloat offsetY = (_scrollView.tz_height > _scrollView.contentSize.height) ? ((_scrollView.tz_height - _scrollView.contentSize.height) * 0.5) : 0.0;
+    CGFloat offsetX = (_scrollView.fj_width > _scrollView.contentSize.width) ? ((_scrollView.fj_width - _scrollView.contentSize.width) * 0.5) : 0.0;
+    CGFloat offsetY = (_scrollView.fj_height > _scrollView.contentSize.height) ? ((_scrollView.fj_height - _scrollView.contentSize.height) * 0.5) : 0.0;
     self.imageContainerView.center = CGPointMake(_scrollView.contentSize.width * 0.5 + offsetX, _scrollView.contentSize.height * 0.5 + offsetY);
 }
 
@@ -376,7 +376,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     _playerLayer.frame = self.bounds;
-    _playButton.frame = CGRectMake(0, 64, self.tz_width, self.tz_height - 64 - 44);
+    _playButton.frame = CGRectMake(0, 64, self.fj_width, self.fj_height - 64 - 44);
 }
 
 - (void)photoPreviewCollectionViewDidScroll {
@@ -392,7 +392,7 @@
         if (currentTime.value == durationTime.value) [_player.currentItem seekToTime:CMTimeMake(0, 1)];
         [_player play];
         [_playButton setImage:nil forState:UIControlStateNormal];
-        if (!TZ_isGlobalHideStatusBar && iOS7Later) {
+        if (!fj_isGlobalHideStatusBar && iOS7Later) {
             [UIApplication sharedApplication].statusBarHidden = YES;
         }
         if (self.singleTapGestureBlock) {

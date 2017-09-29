@@ -9,7 +9,7 @@
 #import "FJPhotoPreviewController.h"
 #import "FJPhotoPreviewCell.h"
 #import "FJAssetModel.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImagePickerController.h"
 #import "FJImageManager.h"
 #import "FJImageCropManager.h"
@@ -67,17 +67,17 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    if (!TZ_isGlobalHideStatusBar) {
+    if (!fj_isGlobalHideStatusBar) {
         if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = YES;
     }
-    if (_currentIndex) [_collectionView setContentOffset:CGPointMake((self.view.tz_width + 20) * _currentIndex, 0) animated:NO];
+    if (_currentIndex) [_collectionView setContentOffset:CGPointMake((self.view.fj_width + 20) * _currentIndex, 0) animated:NO];
     [self refreshNaviBarAndBottomBarState];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    if (!TZ_isGlobalHideStatusBar) {
+    if (!fj_isGlobalHideStatusBar) {
         if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = NO;
     }
     [FJImageManager manager].shouldFixOrientation = NO;
@@ -175,7 +175,7 @@
     _collectionView.scrollsToTop = NO;
     _collectionView.showsHorizontalScrollIndicator = NO;
     _collectionView.contentOffset = CGPointMake(0, 0);
-    _collectionView.contentSize = CGSizeMake(self.models.count * (self.view.tz_width + 20), 0);
+    _collectionView.contentSize = CGSizeMake(self.models.count * (self.view.fj_width + 20), 0);
     [self.view addSubview:_collectionView];
     [_collectionView registerClass:[FJPhotoPreviewCell class] forCellWithReuseIdentifier:@"FJPhotoPreviewCell"];
     [_collectionView registerClass:[FJVideoPreviewCell class] forCellWithReuseIdentifier:@"FJVideoPreviewCell"];
@@ -220,14 +220,14 @@
     
     FJImagePickerController *_tzImagePickerVc = (FJImagePickerController *)self.navigationController;
 
-    _naviBar.frame = CGRectMake(0, 0, self.view.tz_width, 64);
+    _naviBar.frame = CGRectMake(0, 0, self.view.fj_width, 64);
     _backButton.frame = CGRectMake(10, 10, 44, 44);
-    _selectButton.frame = CGRectMake(self.view.tz_width - 54, 10, 42, 42);
+    _selectButton.frame = CGRectMake(self.view.fj_width - 54, 10, 42, 42);
     
-    _layout.itemSize = CGSizeMake(self.view.tz_width + 20, self.view.tz_height);
+    _layout.itemSize = CGSizeMake(self.view.fj_width + 20, self.view.fj_height);
     _layout.minimumInteritemSpacing = 0;
     _layout.minimumLineSpacing = 0;
-    _collectionView.frame = CGRectMake(-10, 0, self.view.tz_width + 20, self.view.tz_height);
+    _collectionView.frame = CGRectMake(-10, 0, self.view.fj_width + 20, self.view.fj_height);
     [_collectionView setCollectionViewLayout:_layout];
     if (_offsetItemCount > 0) {
         CGFloat offsetX = _offsetItemCount * _layout.itemSize.width;
@@ -237,14 +237,14 @@
         [_collectionView reloadData];
     }
     
-    _toolBar.frame = CGRectMake(0, self.view.tz_height - 44, self.view.tz_width, 44);
+    _toolBar.frame = CGRectMake(0, self.view.fj_height - 44, self.view.fj_width, 44);
     if (_tzImagePickerVc.allowPickingOriginalPhoto) {
         CGFloat fullImageWidth = [_tzImagePickerVc.fullImageBtnTitleStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.width;
         _originalPhotoButton.frame = CGRectMake(0, 0, fullImageWidth + 56, 44);
         _originalPhotoLabel.frame = CGRectMake(fullImageWidth + 42, 0, 80, 44);
     }
-    _doneButton.frame = CGRectMake(self.view.tz_width - 44 - 12, 0, 44, 44);
-    _numberImageView.frame = CGRectMake(self.view.tz_width - 56 - 28, 7, 30, 30);
+    _doneButton.frame = CGRectMake(self.view.fj_width - 44 - 12, 0, 44, 44);
+    _numberImageView.frame = CGRectMake(self.view.fj_width - 56 - 28, 7, 30, 30);
     _numberLabel.frame = _numberImageView.frame;
     
     [self configCropView];
@@ -310,7 +310,7 @@
     if (!selectButton.isSelected) {
         // 1. select:check if over the maxImagesCount / 选择照片,检查是否超过了最大个数的限制
         if (_tzImagePickerVc.selectedModels.count >= _tzImagePickerVc.maxImagesCount) {
-            NSString *title = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], _tzImagePickerVc.maxImagesCount];
+            NSString *title = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserMaxSelectCountText"], _tzImagePickerVc.maxImagesCount];
             [_tzImagePickerVc showAlertWithTitle:title];
             return;
             // 2. if not over the maxImagesCount / 如果没有超过最大个数限制
@@ -321,7 +321,7 @@
                 [self.photos addObject:_photosTemp[_currentIndex]];
             }
             if (model.type == TZAssetModelMediaTypeVideo && !_tzImagePickerVc.allowPickingMultipleVideo) {
-                [_tzImagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserHandleVideoAsPhotoWhenMultiStateText"]];
+                [_tzImagePickerVc showAlertWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserHandleVideoAsPhotoWhenMultiStateText"]];
             }
         }
     } else {
@@ -378,7 +378,7 @@
     FJImagePickerController *_tzImagePickerVc = (FJImagePickerController *)self.navigationController;
     // 如果图片正在从iCloud同步中,提醒用户
     if (_progress > 0 && _progress < 1 && (_selectButton.isSelected || !_tzImagePickerVc.selectedModels.count )) {
-        _alertView = [_tzImagePickerVc showAlertWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSynchronizingPhotosFromiCloudText"]];
+        _alertView = [_tzImagePickerVc showAlertWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSynchronizingPhotosFromiCloudText"]];
         return;
     }
     
@@ -432,9 +432,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offSetWidth = scrollView.contentOffset.x;
-    offSetWidth = offSetWidth +  ((self.view.tz_width + 20) * 0.5);
+    offSetWidth = offSetWidth +  ((self.view.fj_width + 20) * 0.5);
     
-    NSInteger currentIndex = offSetWidth / (self.view.tz_width + 20);
+    NSInteger currentIndex = offSetWidth / (self.view.fj_width + 20);
     
     if (currentIndex < _models.count && _currentIndex != currentIndex) {
         _currentIndex = currentIndex;

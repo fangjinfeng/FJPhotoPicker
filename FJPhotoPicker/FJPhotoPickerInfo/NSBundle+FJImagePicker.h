@@ -10,10 +10,10 @@
 
 @interface NSBundle (FJImagePicker)
 
-+ (NSBundle *)tz_imagePickerBundle;
++ (NSBundle *)fj_imagePickerBundle;
 
-+ (NSString *)tz_localizedStringForKey:(NSString *)key value:(NSString *)value;
-+ (NSString *)tz_localizedStringForKey:(NSString *)key;
++ (NSString *)fj_localizedStringForKey:(NSString *)key value:(NSString *)value;
++ (NSString *)fj_localizedStringForKey:(NSString *)key;
 
 @end
 

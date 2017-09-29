@@ -6,10 +6,10 @@
 //  Copyright © 2015年 long. All rights reserved.
 //
 
-#import "ToastUtils.h"
+#import "FJToastUtils.h"
 #import "FJDefine.h"
 
-@implementation ToastUtils
+@implementation FJToastUtils
 
 #pragma mark - 显示提示视图
 + (void)showAtTop:(NSString *)message

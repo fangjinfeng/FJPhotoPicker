@@ -8,7 +8,7 @@
 
 #import "FJAssetCell.h"
 #import "FJAssetModel.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImageManager.h"
 #import "FJProgressView.h"
 #import "FJImagePickerController.h"
@@ -62,7 +62,7 @@
     if (iOS8Later) {
         self.representedAssetIdentifier = [[FJImageManager manager] getAssetIdentifier:model.asset];
     }
-    int32_t imageRequestID = [[FJImageManager manager] getPhotoWithAsset:model.asset photoWidth:self.tz_width completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+    int32_t imageRequestID = [[FJImageManager manager] getPhotoWithAsset:model.asset photoWidth:self.fj_width completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
         if (_progressView) {
             self.progressView.hidden = YES;
             self.imageView.alpha = 1.0;
@@ -128,13 +128,13 @@
         self.bottomView.hidden = NO;
         self.timeLength.text = _model.timeLength;
         self.videoImgView.hidden = NO;
-        _timeLength.tz_left = self.videoImgView.tz_right;
+        _timeLength.fj_left = self.videoImgView.fj_right;
         _timeLength.textAlignment = NSTextAlignmentRight;
     } else if (type == TZAssetCellTypePhotoGif) {
         self.bottomView.hidden = NO;
         self.timeLength.text = @"GIF";
         self.videoImgView.hidden = YES;
-        _timeLength.tz_left = 5;
+        _timeLength.fj_left = 5;
         _timeLength.textAlignment = NSTextAlignmentLeft;
     }
 }
@@ -237,17 +237,17 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _selectPhotoButton.frame = CGRectMake(self.tz_width - 44, 0, 44, 44);
-    _selectImageView.frame = CGRectMake(self.tz_width - 27, 0, 27, 27);
-    _imageView.frame = CGRectMake(0, 0, self.tz_width, self.tz_height);
+    _selectPhotoButton.frame = CGRectMake(self.fj_width - 44, 0, 44, 44);
+    _selectImageView.frame = CGRectMake(self.fj_width - 27, 0, 27, 27);
+    _imageView.frame = CGRectMake(0, 0, self.fj_width, self.fj_height);
     
     static CGFloat progressWH = 20;
-    CGFloat progressXY = (self.tz_width - progressWH) / 2;
+    CGFloat progressXY = (self.fj_width - progressWH) / 2;
     _progressView.frame = CGRectMake(progressXY, progressXY, progressWH, progressWH);
 
-    _bottomView.frame = CGRectMake(0, self.tz_height - 17, self.tz_width, 17);
+    _bottomView.frame = CGRectMake(0, self.fj_height - 17, self.fj_width, 17);
     _videoImgView.frame = CGRectMake(8, 0, 17, 17);
-    _timeLength.frame = CGRectMake(self.videoImgView.tz_right, 0, self.tz_width - self.videoImgView.tz_right - 5, 17);
+    _timeLength.frame = CGRectMake(self.videoImgView.fj_right, 0, self.fj_width - self.videoImgView.fj_right - 5, 17);
     
     self.type = (NSInteger)self.model.type;
     self.showSelectBtn = self.showSelectBtn;
@@ -269,7 +269,7 @@
 /// For fitting iOS6
 - (void)layoutSubviews {
     if (iOS7Later) [super layoutSubviews];
-    _selectedCountButton.frame = CGRectMake(self.tz_width - 24 - 30, 23, 24, 24);
+    _selectedCountButton.frame = CGRectMake(self.fj_width - 24 - 30, 23, 24, 24);
 }
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer {
@@ -313,7 +313,7 @@
     if (_titleLabel == nil) {
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.font = [UIFont boldSystemFontOfSize:17];
-        titleLabel.frame = CGRectMake(80, 0, self.tz_width - 80 - 50, self.tz_height);
+        titleLabel.frame = CGRectMake(80, 0, self.fj_width - 80 - 50, self.fj_height);
         titleLabel.textColor = [UIColor blackColor];
         titleLabel.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:titleLabel];
@@ -326,7 +326,7 @@
     if (_arrowImageView == nil) {
         UIImageView *arrowImageView = [[UIImageView alloc] init];
         CGFloat arrowWH = 15;
-        arrowImageView.frame = CGRectMake(self.tz_width - arrowWH - 12, 28, arrowWH, arrowWH);
+        arrowImageView.frame = CGRectMake(self.fj_width - arrowWH - 12, 28, arrowWH, arrowWH);
         [arrowImageView setImage:[UIImage imageNamedFromMyBundle:@"TableViewArrow"]];
         [self.contentView addSubview:arrowImageView];
         _arrowImageView = arrowImageView;

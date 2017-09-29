@@ -7,7 +7,7 @@
 //
 
 #import "FJImageCropManager.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import <ImageIO/ImageIO.h>
 #import "FJImageManager.h"
 
@@ -35,7 +35,7 @@
     // 平移的处理
     CGRect imageViewRect = [imageView convertRect:imageView.bounds toView:containerView];
     CGPoint point = CGPointMake(imageViewRect.origin.x + imageViewRect.size.width / 2, imageViewRect.origin.y + imageViewRect.size.height / 2);
-    CGFloat xMargin = containerView.tz_width - CGRectGetMaxX(rect) - rect.origin.x;
+    CGFloat xMargin = containerView.fj_width - CGRectGetMaxX(rect) - rect.origin.x;
     CGPoint zeroPoint = CGPointMake((CGRectGetWidth(containerView.frame) - xMargin) / 2, containerView.center.y);
     CGPoint translation = CGPointMake(point.x - zeroPoint.x, point.y - zeroPoint.y);
     transform = CGAffineTransformTranslate(transform, translation.x, translation.y);
@@ -116,7 +116,7 @@
 
 @implementation UIImage (TZGif)
 
-+ (UIImage *)sd_tz_animatedGIFWithData:(NSData *)data {
++ (UIImage *)sd_fj_animatedGIFWithData:(NSData *)data {
     if (!data) {
         return nil;
     }

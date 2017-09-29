@@ -34,6 +34,6 @@
 /// 为了防止冲突，我将分类名字和方法名字做了修改
 @interface UIImage (TZGif)
 
-+ (UIImage *)sd_tz_animatedGIFWithData:(NSData *)data;
++ (UIImage *)sd_fj_animatedGIFWithData:(NSData *)data;
 
 @end

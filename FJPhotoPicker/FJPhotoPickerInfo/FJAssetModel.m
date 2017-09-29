@@ -33,8 +33,8 @@
 
 - (void)setResult:(id)result {
     _result = result;
-    BOOL allowPickingImage = [[[NSUserDefaults standardUserDefaults] objectForKey:@"tz_allowPickingImage"] isEqualToString:@"1"];
-    BOOL allowPickingVideo = [[[NSUserDefaults standardUserDefaults] objectForKey:@"tz_allowPickingVideo"] isEqualToString:@"1"];
+    BOOL allowPickingImage = [[[NSUserDefaults standardUserDefaults] objectForKey:@"fj_allowPickingImage"] isEqualToString:@"1"];
+    BOOL allowPickingVideo = [[[NSUserDefaults standardUserDefaults] objectForKey:@"fj_allowPickingVideo"] isEqualToString:@"1"];
     [[FJImageManager manager] getAssetsFromFetchResult:result allowPickingVideo:allowPickingVideo allowPickingImage:allowPickingImage completion:^(NSArray<FJAssetModel *> *models) {
         _models = models;
         if (_selectedModels) {

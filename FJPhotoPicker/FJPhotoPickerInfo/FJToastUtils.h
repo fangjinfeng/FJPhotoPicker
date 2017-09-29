@@ -10,18 +10,18 @@
 #import <UIKit/UIKit.h>
 
 #define ShowToastAtTop(format, ...) \
-[ToastUtils showAtTop:[NSString stringWithFormat:format, ## __VA_ARGS__]]
+[FJToastUtils showAtTop:[NSString stringWithFormat:format, ## __VA_ARGS__]]
 
 #define ShowToast(format, ...) \
-[ToastUtils show:[NSString stringWithFormat:format, ## __VA_ARGS__]]
+[FJToastUtils show:[NSString stringWithFormat:format, ## __VA_ARGS__]]
 
 #define ShowToastLongAtTop(format, ...) \
-[ToastUtils showLongAtTop:[NSString stringWithFormat:format, ## __VA_ARGS__]]
+[FJToastUtils showLongAtTop:[NSString stringWithFormat:format, ## __VA_ARGS__]]
 
 #define ShowToastLong(format, ...) \
-[ToastUtils showLong:[NSString stringWithFormat:format, ## __VA_ARGS__]]
+[FJToastUtils showLong:[NSString stringWithFormat:format, ## __VA_ARGS__]]
 
-@interface ToastUtils : NSObject
+@interface FJToastUtils : NSObject
 
 //显示提示视图, 默认显示在屏幕上方，防止被软键盘覆盖，1.5s后自动消失
 + (void)showAtTop:(NSString *)message;

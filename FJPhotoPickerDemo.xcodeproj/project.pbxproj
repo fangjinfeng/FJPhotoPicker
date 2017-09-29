@@ -36,8 +36,8 @@
 		30883E9E1F70A98200019D3A /* FJSelectPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E7A1F70A98200019D3A /* FJSelectPhotoTool.m */; };
 		30883E9F1F70A98200019D3A /* FJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E7C1F70A98200019D3A /* FJVideoPlayerController.m */; };
 		30883EA01F70A98200019D3A /* NSBundle+FJImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E7E1F70A98200019D3A /* NSBundle+FJImagePicker.m */; };
-		30883EA11F70A98200019D3A /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E801F70A98200019D3A /* ToastUtils.m */; };
-		30883EA21F70A98200019D3A /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E821F70A98200019D3A /* UIView+Layout.m */; };
+		30883EA11F70A98200019D3A /* FJToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E801F70A98200019D3A /* FJToastUtils.m */; };
+		30883EA21F70A98200019D3A /* UIView+FJLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E821F70A98200019D3A /* UIView+FJLayout.m */; };
 		30883EA31F70A98200019D3A /* UIViewController+FJCurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30883E841F70A98200019D3A /* UIViewController+FJCurrentViewController.m */; };
 		30883EBE1F70C8A700019D3A /* FJPhotoPicker-Album.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EB91F70C8A700019D3A /* FJPhotoPicker-Album.gif */; };
 		30883EBF1F70C8A700019D3A /* FJPhotoPicker-Camera.gif in Resources */ = {isa = PBXBuildFile; fileRef = 30883EBA1F70C8A700019D3A /* FJPhotoPicker-Camera.gif */; };
@@ -129,10 +129,10 @@
 		30883E7C1F70A98200019D3A /* FJVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJVideoPlayerController.m; sourceTree = "<group>"; };
 		30883E7D1F70A98200019D3A /* NSBundle+FJImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FJImagePicker.h"; sourceTree = "<group>"; };
 		30883E7E1F70A98200019D3A /* NSBundle+FJImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FJImagePicker.m"; sourceTree = "<group>"; };
-		30883E7F1F70A98200019D3A /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastUtils.h; sourceTree = "<group>"; };
-		30883E801F70A98200019D3A /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
-		30883E811F70A98200019D3A /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		30883E821F70A98200019D3A /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		30883E7F1F70A98200019D3A /* FJToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJToastUtils.h; sourceTree = "<group>"; };
+		30883E801F70A98200019D3A /* FJToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJToastUtils.m; sourceTree = "<group>"; };
+		30883E811F70A98200019D3A /* UIView+FJLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FJLayout.h"; sourceTree = "<group>"; };
+		30883E821F70A98200019D3A /* UIView+FJLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FJLayout.m"; sourceTree = "<group>"; };
 		30883E831F70A98200019D3A /* UIViewController+FJCurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FJCurrentViewController.h"; sourceTree = "<group>"; };
 		30883E841F70A98200019D3A /* UIViewController+FJCurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FJCurrentViewController.m"; sourceTree = "<group>"; };
 		30883EB91F70C8A700019D3A /* FJPhotoPicker-Album.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FJPhotoPicker-Album.gif"; sourceTree = "<group>"; };
@@ -292,10 +292,10 @@
 				30883E7C1F70A98200019D3A /* FJVideoPlayerController.m */,
 				30883E7D1F70A98200019D3A /* NSBundle+FJImagePicker.h */,
 				30883E7E1F70A98200019D3A /* NSBundle+FJImagePicker.m */,
-				30883E7F1F70A98200019D3A /* ToastUtils.h */,
-				30883E801F70A98200019D3A /* ToastUtils.m */,
-				30883E811F70A98200019D3A /* UIView+Layout.h */,
-				30883E821F70A98200019D3A /* UIView+Layout.m */,
+				30883E7F1F70A98200019D3A /* FJToastUtils.h */,
+				30883E801F70A98200019D3A /* FJToastUtils.m */,
+				30883E811F70A98200019D3A /* UIView+FJLayout.h */,
+				30883E821F70A98200019D3A /* UIView+FJLayout.m */,
 				30883E831F70A98200019D3A /* UIViewController+FJCurrentViewController.h */,
 				30883E841F70A98200019D3A /* UIViewController+FJCurrentViewController.m */,
 			);
@@ -478,7 +478,7 @@
 				30883E921F70A98200019D3A /* FJImagePickerController.m in Sources */,
 				3015BB221F6FF03F007A7035 /* AppDelegate.m in Sources */,
 				30883E961F70A98200019D3A /* FJPhotoActionSheet.m in Sources */,
-				30883EA21F70A98200019D3A /* UIView+Layout.m in Sources */,
+				30883EA21F70A98200019D3A /* UIView+FJLayout.m in Sources */,
 				30883E9D1F70A98200019D3A /* FJProgressView.m in Sources */,
 				30883E8B1F70A98200019D3A /* FJAssetCell.m in Sources */,
 				3015BB1F1F6FF03F007A7035 /* main.m in Sources */,
@@ -496,7 +496,7 @@
 				30883E991F70A98200019D3A /* FJPhotoPreviewCell.m in Sources */,
 				30883E9C1F70A98200019D3A /* FJProgressHUD.m in Sources */,
 				30883E901F70A98200019D3A /* FJImageCropManager.m in Sources */,
-				30883EA11F70A98200019D3A /* ToastUtils.m in Sources */,
+				30883EA11F70A98200019D3A /* FJToastUtils.m in Sources */,
 				30883E8F1F70A98200019D3A /* FJGifPhotoPreviewController.m in Sources */,
 				30883E8A1F70A98200019D3A /* FJAlbumPickerController.m in Sources */,
 				30883E9E1F70A98200019D3A /* FJSelectPhotoTool.m in Sources */,

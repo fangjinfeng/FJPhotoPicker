@@ -40,7 +40,7 @@
     lab.textAlignment = NSTextAlignmentCenter;
     lab.textColor = [UIColor whiteColor];
     lab.font = [UIFont systemFontOfSize:16];
-    lab.text = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserHandleText"];
+    lab.text = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserHandleText"];
     
     [view addSubview:indicator];
     [view addSubview:lab];

@@ -15,7 +15,7 @@
 #define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
 #define iOS9_1Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.1f)
 
-#define TZ_isGlobalHideStatusBar [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIStatusBarHidden"] boolValue]
+#define fj_isGlobalHideStatusBar [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIStatusBarHidden"] boolValue]
 
 @protocol FJImagePickerControllerDelegate;
 @interface FJImagePickerController : UINavigationController
@@ -187,8 +187,8 @@
 // photos数组里的UIImage对象，默认是828像素宽，你可以通过设置photoWidth属性的值来改变它
 - (void)imagePickerController:(FJImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto;
 - (void)imagePickerController:(FJImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto infos:(NSArray<NSDictionary *> *)infos;
-//- (void)imagePickerControllerDidCancel:(TZImagePickerController *)picker __attribute__((deprecated("Use -tz_imagePickerControllerDidCancel:.")));
-- (void)tz_imagePickerControllerDidCancel:(FJImagePickerController *)picker;
+//- (void)imagePickerControllerDidCancel:(TZImagePickerController *)picker __attribute__((deprecated("Use -fj_imagePickerControllerDidCancel:.")));
+- (void)fj_imagePickerControllerDidCancel:(FJImagePickerController *)picker;
 
 // If user picking a video, this callback will be called.
 // If system version > iOS8,asset is kind of PHAsset class, else is ALAsset class.

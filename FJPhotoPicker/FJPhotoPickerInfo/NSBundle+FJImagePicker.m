@@ -11,18 +11,18 @@
 
 @implementation NSBundle (FJImagePicker)
 
-+ (NSBundle *)tz_imagePickerBundle {
++ (NSBundle *)fj_imagePickerBundle {
     NSBundle *bundle = [NSBundle bundleForClass:[FJImagePickerController class]];
     NSURL *url = [bundle URLForResource:@"FJPhotoPicker" withExtension:@"bundle"];
     bundle = [NSBundle bundleWithURL:url];
     return bundle;
 }
 
-+ (NSString *)tz_localizedStringForKey:(NSString *)key {
-    return [self tz_localizedStringForKey:key value:@""];
++ (NSString *)fj_localizedStringForKey:(NSString *)key {
+    return [self fj_localizedStringForKey:key value:@""];
 }
 
-+ (NSString *)tz_localizedStringForKey:(NSString *)key value:(NSString *)value {
++ (NSString *)fj_localizedStringForKey:(NSString *)key value:(NSString *)value {
     static NSBundle *bundle = nil;
     if (bundle == nil) {
         NSString *language = [NSLocale preferredLanguages].firstObject;
@@ -31,7 +31,7 @@
         } else {
             language = @"en";
         }
-        bundle = [NSBundle bundleWithPath:[[NSBundle tz_imagePickerBundle] pathForResource:language ofType:@"lproj"]];
+        bundle = [NSBundle bundleWithPath:[[NSBundle fj_imagePickerBundle] pathForResource:language ofType:@"lproj"]];
     }
     NSString *value1 = [bundle localizedStringForKey:key value:value table:nil];
     return value1;

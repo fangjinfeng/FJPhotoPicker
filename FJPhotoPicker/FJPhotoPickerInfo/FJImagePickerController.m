@@ -10,7 +10,7 @@
 #import "FJDefine.h"
 #import "FJAssetModel.h"
 #import "FJAssetCell.h"
-#import "UIView+Layout.h"
+#import "UIView+FJLayout.h"
 #import "FJImageManager.h"
 #import "FJImagePickerController.h"
 #import "FJPhotoPickerController.h"
@@ -74,20 +74,20 @@
         
         if (![[FJImageManager manager] authorizationStatusAuthorized]) {
             _tipLabel = [[UILabel alloc] init];
-            _tipLabel.frame = CGRectMake(8, 120, self.view.tz_width - 16, 60);
+            _tipLabel.frame = CGRectMake(8, 120, self.view.fj_width - 16, 60);
             _tipLabel.textAlignment = NSTextAlignmentCenter;
             _tipLabel.numberOfLines = 0;
             _tipLabel.font = [UIFont systemFontOfSize:16];
             _tipLabel.textColor = [UIColor blackColor];
             NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
             if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
-            NSString *tipText = [NSString stringWithFormat:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserNoAblumAuthorityText"],appName];
+            NSString *tipText = [NSString stringWithFormat:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserNoAblumAuthorityText"],appName];
             _tipLabel.text = tipText;
             [self.view addSubview:_tipLabel];
             
             _settingBtn = [UIButton buttonWithType:UIButtonTypeSystem];
             [_settingBtn setTitle:self.settingBtnTitleStr forState:UIControlStateNormal];
-            _settingBtn.frame = CGRectMake(0, 180, self.view.tz_width, 44);
+            _settingBtn.frame = CGRectMake(0, 180, self.view.fj_width, 44);
             _settingBtn.titleLabel.font = [UIFont systemFontOfSize:18];
             [_settingBtn addTarget:self action:@selector(settingBtnClick) forControlEvents:UIControlEventTouchUpInside];
             [self.view addSubview:_settingBtn];
@@ -170,7 +170,7 @@
         self.navigationBar.barTintColor = kFJPhotoNavigationBarTintColor;
         self.navigationBar.tintColor = [UIColor whiteColor];
         self.automaticallyAdjustsScrollViewInsets = NO;
-        if (!TZ_isGlobalHideStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
+        if (!fj_isGlobalHideStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
     }    
 }
 
@@ -252,8 +252,8 @@
     [self configDefaultImageName];
     [self configDefaultBtnTitle];
     
-    CGFloat cropViewWH = MIN(self.view.tz_width, self.view.tz_height) / 3 * 2;
-    self.cropRect = CGRectMake((self.view.tz_width - cropViewWH) / 2, (self.view.tz_height - cropViewWH) / 2, cropViewWH, cropViewWH);
+    CGFloat cropViewWH = MIN(self.view.fj_width, self.view.fj_height) / 3 * 2;
+    self.cropRect = CGRectMake((self.view.fj_width - cropViewWH) / 2, (self.view.fj_height - cropViewWH) / 2, cropViewWH, cropViewWH);
 }
 
 - (void)configDefaultImageName {
@@ -267,12 +267,12 @@
 }
 
 - (void)configDefaultBtnTitle {
-    self.doneBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserDoneText"];
-    self.cancelBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCancelText"];
-    self.previewBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserPreviewText"];
-    self.fullImageBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOriginalText"];
-    self.settingBtnTitleStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSettingText"];
-    self.processHintStr = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserHandleText"];
+    self.doneBtnTitleStr = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserDoneText"];
+    self.cancelBtnTitleStr = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCancelText"];
+    self.previewBtnTitleStr = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserPreviewText"];
+    self.fullImageBtnTitleStr = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserOriginalText"];
+    self.settingBtnTitleStr = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSettingText"];
+    self.processHintStr = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserHandleText"];
 }
 
 - (void)observeAuthrizationStatusChange {
@@ -308,11 +308,11 @@
 - (id)showAlertWithTitle:(NSString *)title {
     if (iOS8Later) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] style:UIAlertActionStyleDefault handler:nil]];
+        [alertController addAction:[UIAlertAction actionWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserOKText"] style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alertController animated:YES completion:nil];
         return alertController;
     } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles:nil, nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles:nil, nil];
         [alertView show];
         return alertView;
     }
@@ -395,14 +395,14 @@
 
 - (void)setCircleCropRadius:(NSInteger)circleCropRadius {
     _circleCropRadius = circleCropRadius;
-    self.cropRect = CGRectMake(self.view.tz_width / 2 - circleCropRadius, self.view.tz_height / 2 - _circleCropRadius, _circleCropRadius * 2, _circleCropRadius * 2);
+    self.cropRect = CGRectMake(self.view.fj_width / 2 - circleCropRadius, self.view.fj_height / 2 - _circleCropRadius, _circleCropRadius * 2, _circleCropRadius * 2);
 }
 
 - (void)setCropRect:(CGRect)cropRect {
     _cropRect = cropRect;
     _cropRectPortrait = cropRect;
     CGFloat widthHeight = cropRect.size.width;
-    _cropRectLandscape = CGRectMake((self.view.tz_height - widthHeight) / 2, cropRect.origin.x, widthHeight, widthHeight);
+    _cropRectLandscape = CGRectMake((self.view.fj_height - widthHeight) / 2, cropRect.origin.x, widthHeight, widthHeight);
 }
 
 - (void)setTimeout:(NSInteger)timeout {
@@ -475,14 +475,14 @@
 - (void)setAllowPickingImage:(BOOL)allowPickingImage {
     _allowPickingImage = allowPickingImage;
     NSString *allowPickingImageStr = _allowPickingImage ? @"1" : @"0";
-    [[NSUserDefaults standardUserDefaults] setObject:allowPickingImageStr forKey:@"tz_allowPickingImage"];
+    [[NSUserDefaults standardUserDefaults] setObject:allowPickingImageStr forKey:@"fj_allowPickingImage"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)setAllowPickingVideo:(BOOL)allowPickingVideo {
     _allowPickingVideo = allowPickingVideo;
     NSString *allowPickingVideoStr = _allowPickingVideo ? @"1" : @"0";
-    [[NSUserDefaults standardUserDefaults] setObject:allowPickingVideoStr forKey:@"tz_allowPickingVideo"];
+    [[NSUserDefaults standardUserDefaults] setObject:allowPickingVideoStr forKey:@"fj_allowPickingVideo"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -499,8 +499,8 @@
         if ([[UIApplication sharedApplication] canOpenURL:privacyUrl]) {
             [[UIApplication sharedApplication] openURL:privacyUrl];
         } else {
-            NSString *message = [NSBundle tz_localizedStringForKey:@"FJPhotoBrowserCanNotJumpToPrivacySettingPage"];
-            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle tz_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles: nil];
+            NSString *message = [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserCanNotJumpToPrivacySettingPage"];
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSorryText"] message:message delegate:nil cancelButtonTitle:[NSBundle fj_localizedStringForKey:@"FJPhotoBrowserOKText"] otherButtonTitles: nil];
             [alert show];
         }
     }
@@ -539,7 +539,7 @@
 - (void)willInterfaceOrientionChange {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.02 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (![UIApplication sharedApplication].statusBarHidden) {
-            if (iOS7Later && !TZ_isGlobalHideStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
+            if (iOS7Later && !fj_isGlobalHideStatusBar) [UIApplication sharedApplication].statusBarHidden = NO;
         }
     });
 }
@@ -549,7 +549,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    _HUDContainer.frame = CGRectMake((self.view.tz_width - 120) / 2, (self.view.tz_height - 90) / 2, 120, 90);
+    _HUDContainer.frame = CGRectMake((self.view.fj_width - 120) / 2, (self.view.fj_height - 90) / 2, 120, 90);
     _HUDIndicatorView.frame = CGRectMake(45, 15, 30, 30);
     _HUDLabel.frame = CGRectMake(0,40, 120, 50);    
 }
@@ -567,8 +567,8 @@
 }
 
 - (void)callDelegateMethod {
-    if ([self.pickerDelegate respondsToSelector:@selector(tz_imagePickerControllerDidCancel:)]) {
-        [self.pickerDelegate tz_imagePickerControllerDidCancel:self];
+    if ([self.pickerDelegate respondsToSelector:@selector(fj_imagePickerControllerDidCancel:)]) {
+        [self.pickerDelegate fj_imagePickerControllerDidCancel:self];
     }
     if (self.imagePickerControllerDidCancelHandle) {
         self.imagePickerControllerDidCancelHandle();
@@ -582,7 +582,7 @@
 @implementation UIImage (MyBundle)
 
 + (UIImage *)imageNamedFromMyBundle:(NSString *)name {
-    NSBundle *imageBundle = [NSBundle tz_imagePickerBundle];
+    NSBundle *imageBundle = [NSBundle fj_imagePickerBundle];
     name = [name stringByAppendingString:@"@2x"];
     NSString *imagePath = [imageBundle pathForResource:name ofType:@"png"];
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];

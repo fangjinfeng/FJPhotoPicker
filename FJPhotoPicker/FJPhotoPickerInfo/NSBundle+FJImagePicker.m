@@ -2,8 +2,8 @@
 //  NSBundle+TZImagePicker.m
 //  TZImagePickerController
 //
-//  Created by fjf on 2017/8/19.
-//  Copyright © 2017年 fjf. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //
 
 #import "NSBundle+FJImagePicker.h"

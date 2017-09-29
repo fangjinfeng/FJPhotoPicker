@@ -2,8 +2,8 @@
 //  ZLCollectionCell.m
 //  多选相册照片
 //
-//  Created by long on 15/11/25.
-//  Copyright © 2015年 long. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //
 
 #import "FJCollectionCell.h"

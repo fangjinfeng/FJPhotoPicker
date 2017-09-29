@@ -2,8 +2,8 @@
 //  TZVideoPlayerController.m
 //  TZImagePickerController
 //
-//  Created by 谭真 on 16/1/5.
-//  Copyright © 2016年 谭真. All rights reserved.
+//  Created by fjf on 2017/6/20.
+//  Copyright © 2017年 long. All rights reserved.
 //
 
 #import "FJVideoPlayerController.h"

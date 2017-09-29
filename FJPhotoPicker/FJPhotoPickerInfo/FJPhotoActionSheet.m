@@ -65,7 +65,7 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos, NSArray<PHAsset *> *se
 #pragma mark --- init method
 
 - (instancetype)init {
-    self = [[[NSBundle mainBundle] loadNibNamed:@"FJPhotoActionSheet" owner:self options:nil] lastObject];
+    self = [[[NSBundle bundleForClass:[self class]] loadNibNamed:@"FJPhotoActionSheet" owner:self options:nil] lastObject];
     if (self) {
         self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -75,7 +75,7 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos, NSArray<PHAsset *> *se
         
         self.collectionView.collectionViewLayout = layout;
         self.collectionView.backgroundColor = [UIColor whiteColor];
-        [self.collectionView registerNib:[UINib nibWithNibName:@"FJCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"FJCollectionCell"];
+        [self.collectionView registerNib:[UINib nibWithNibName:@"FJCollectionCell" bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:@"FJCollectionCell"];
         
         self.maxSelectCount = 10;
         self.maxPreviewCount = 20;
@@ -603,7 +603,7 @@ static char RelatedKey;
 - (void)showNoAuthorityVC
 {
     //无相册访问权限
-    FJNoAuthorityViewController *nvc = [[FJNoAuthorityViewController alloc] initWithNibName:@"FJNoAuthorityViewController" bundle:[NSBundle mainBundle]];
+    FJNoAuthorityViewController *nvc = [[FJNoAuthorityViewController alloc] initWithNibName:@"FJNoAuthorityViewController" bundle:[NSBundle bundleForClass:[self class]]];
     [self presentVC:nvc];
 }
 

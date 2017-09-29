@@ -45,6 +45,8 @@
 #define kFJLocalizaedStringForKey(a) [NSBundle tz_localizedStringForKey:a]
 
 
+#define kFJPhotoBrowserBundle [NSBundle bundleForClass:[self class]]
+
 ///////ZLBigImageCell 不建议设置太大，太大的话会导致图片加载过慢
 #define kMaxImageWidth 500
 

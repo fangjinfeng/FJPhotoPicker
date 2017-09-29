@@ -13,7 +13,7 @@
     return self.frame.origin.x;
 }
 
-- (void)setfj_left:(CGFloat)x {
+- (void)setFj_left:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
@@ -23,7 +23,7 @@
     return self.frame.origin.y;
 }
 
-- (void)setfj_top:(CGFloat)y {
+- (void)setFj_top:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
@@ -33,7 +33,7 @@
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setfj_right:(CGFloat)right {
+- (void)setFj_right:(CGFloat)right {
     CGRect frame = self.frame;
     frame.origin.x = right - frame.size.width;
     self.frame = frame;
@@ -43,7 +43,7 @@
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setfj_bottom:(CGFloat)bottom {
+- (void)setFj_bottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
@@ -53,7 +53,7 @@
     return self.frame.size.width;
 }
 
-- (void)setfj_width:(CGFloat)width {
+- (void)setFj_width:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
@@ -63,7 +63,7 @@
     return self.frame.size.height;
 }
 
-- (void)setfj_height:(CGFloat)height {
+- (void)setFj_height:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
@@ -73,7 +73,7 @@
     return self.center.x;
 }
 
-- (void)setfj_centerX:(CGFloat)centerX {
+- (void)setFj_centerX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
 
@@ -81,7 +81,7 @@
     return self.center.y;
 }
 
-- (void)setfj_centerY:(CGFloat)centerY {
+- (void)setFj_centerY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }
 
@@ -89,7 +89,7 @@
     return self.frame.origin;
 }
 
-- (void)setfj_origin:(CGPoint)origin {
+- (void)setFj_origin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
@@ -99,7 +99,7 @@
     return self.frame.size;
 }
 
-- (void)setfj_size:(CGSize)size {
+- (void)setFj_size:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;

@@ -486,9 +486,7 @@ static char RelatedKey;
 #pragma mark - 请求所选择图片、回调
 - (void)requestSelPhotos:(UIViewController *)vc
 {
-    FJProgressHUD *hud = [[FJProgressHUD alloc] init];
-    [hud show];
-    
+
     weakify(self);
     NSMutableArray *photos = [NSMutableArray arrayWithCapacity:self.arraySelectPhotos.count];
     for (int i = 0; i < self.arraySelectPhotos.count; i++) {
@@ -505,8 +503,6 @@ static char RelatedKey;
             for (id obj in photos) {
                 if ([obj isKindOfClass:[NSString class]]) return;
             }
-            
-            [hud hide];
             [strongSelf done:photos];
             [strongSelf hide];
             [vc.navigationController dismissViewControllerAnimated:YES completion:nil];
@@ -642,9 +638,6 @@ static char RelatedKey;
         strongify(weakSelf);
         if (strongSelf.handler) {
             UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-            FJProgressHUD *hud = [[FJProgressHUD alloc] init];
-            [hud show];
-            
             [[FJPhotoTool sharePhotoTool] saveImageToAblum:image completion:^(BOOL suc, PHAsset *asset) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (suc) {
@@ -652,7 +645,6 @@ static char RelatedKey;
                     } else {
                         ShowToastLong(@"%@", [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSaveImageErrorText"]);
                     }
-                    [hud hide];
                     [strongSelf hide];
                 });
             }];
@@ -668,8 +660,6 @@ static char RelatedKey;
         strongify(weakSelf);
         if (strongSelf.handler) {
             UIImage *image = [editingInfo objectForKey:UIImagePickerControllerOriginalImage];
-            FJProgressHUD *hud = [[FJProgressHUD alloc] init];
-            [hud show];
             
             [[FJPhotoTool sharePhotoTool] saveImageToAblum:image completion:^(BOOL suc, PHAsset *asset) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -678,7 +668,6 @@ static char RelatedKey;
                     } else {
                         ShowToastLong(@"%@", [NSBundle fj_localizedStringForKey:@"FJPhotoBrowserSaveImageErrorText"]);
                     }
-                    [hud hide];
                     [strongSelf hide];
                 });
             }];

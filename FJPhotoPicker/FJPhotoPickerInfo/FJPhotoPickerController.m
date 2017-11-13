@@ -9,6 +9,7 @@
 #import "FJPhotoPickerController.h"
 #import "FJImagePickerController.h"
 #import "FJPhotoPreviewController.h"
+#import "FJDefine.h"
 #import "FJAssetCell.h"
 #import "FJAssetModel.h"
 #import "UIView+FJLayout.h"
@@ -156,6 +157,9 @@ static CGFloat itemMargin = 5;
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.alwaysBounceHorizontal = NO;
+    if (@available(iOS 11.0, *)) {
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
     _collectionView.contentInset = UIEdgeInsetsMake(itemMargin, itemMargin, itemMargin, itemMargin);
     
     if (_showTakePhotoBtn && tzImagePickerVc.allowTakePicture ) {
@@ -243,6 +247,14 @@ static CGFloat itemMargin = 5;
 
 #pragma mark - Layout
 
+- (CGFloat)bottomToolBarHeight {
+    CGFloat bottomToolBarHeight = 50.0f;
+    if (kIPhoneX) {
+        bottomToolBarHeight += kTabbarBarHeightGap;
+    }
+    return bottomToolBarHeight;
+}
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
@@ -250,14 +262,15 @@ static CGFloat itemMargin = 5;
     
     CGFloat top = 0;
     CGFloat collectionViewHeight = 0;
-    CGFloat naviBarHeight = self.navigationController.navigationBar.fj_height;
+    CGFloat bottomToolBarHeight = [self bottomToolBarHeight];
+    CGFloat naviBarHeight = kNavigationBarHeight;
     BOOL isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
     if (self.navigationController.navigationBar.isTranslucent) {
         top = naviBarHeight;
-        if (iOS7Later && !isStatusBarHidden) top += 20;
-        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.fj_height - 50 - top : self.view.fj_height - top;;
+        if (iOS7Later && isStatusBarHidden) top -= 20;
+        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.fj_height - bottomToolBarHeight - top : self.view.fj_height - top;;
     } else {
-        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.fj_height - 50 : self.view.fj_height;
+        collectionViewHeight = tzImagePickerVc.showSelectBtn ? self.view.fj_height - bottomToolBarHeight : self.view.fj_height;
     }
     _collectionView.frame = CGRectMake(0, top, self.view.fj_width, collectionViewHeight);
     CGFloat itemWH = (self.view.fj_width - (self.columnNumber + 1) * itemMargin) / self.columnNumber;
@@ -272,13 +285,15 @@ static CGFloat itemMargin = 5;
     
     CGFloat yOffset = 0;
     if (!self.navigationController.navigationBar.isHidden) {
-        yOffset = self.view.fj_height - 50;
+        yOffset = self.view.fj_height - bottomToolBarHeight;
     } else {
         CGFloat navigationHeight = naviBarHeight;
         if (iOS7Later) navigationHeight += 20;
-        yOffset = self.view.fj_height - 50 - navigationHeight;
+        yOffset = self.view.fj_height - bottomToolBarHeight - navigationHeight;
     }
-    _bottomToolBar.frame = CGRectMake(0, yOffset, self.view.fj_width, 50);
+    
+   
+    _bottomToolBar.frame = CGRectMake(0, yOffset, self.view.fj_width, bottomToolBarHeight);
     CGFloat previewWidth = [tzImagePickerVc.previewBtnTitleStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil].size.width + 2;
     if (!tzImagePickerVc.allowPreview) {
         previewWidth = 0.0;
@@ -287,7 +302,7 @@ static CGFloat itemMargin = 5;
     _previewButton.fj_width = !tzImagePickerVc.showSelectBtn ? 0 : previewWidth;
     if (tzImagePickerVc.allowPickingOriginalPhoto) {
         CGFloat fullImageWidth = [tzImagePickerVc.fullImageBtnTitleStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.width;
-        _originalPhotoButton.frame = CGRectMake(CGRectGetMaxX(_previewButton.frame), self.view.fj_height - 50, fullImageWidth + 56, 50);
+        _originalPhotoButton.frame = CGRectMake(CGRectGetMaxX(_previewButton.frame), self.view.fj_height - bottomToolBarHeight, fullImageWidth + 56, 50);
         _originalPhotoLabel.frame = CGRectMake(fullImageWidth + 46, 0, 80, 50);
     }
     _doneButton.frame = CGRectMake(self.view.fj_width - 44 - 12, 3, 44, 44);

@@ -36,12 +36,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FJPhotoPicker/FJPhotoPickerInfo/FJPhotoActionSheet.m"
-            timestampString = "529469951.785887"
+            timestampString = "532267342.575363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "609"
-            endingLineNumber = "609"
-            landmarkName = "-presentVC:"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
+            landmarkName = "-btnCancel_Click:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -52,12 +52,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FJPhotoPicker/FJPhotoPickerInfo/FJPhotoActionSheet.m"
-            timestampString = "529469951.786354"
+            timestampString = "532267342.57584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "617"
-            endingLineNumber = "617"
-            landmarkName = "-presentVC:"
+            startingLineNumber = "683"
+            endingLineNumber = "683"
+            landmarkName = "-imagePickerControllerDidCancel:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FJPhotoPicker/FJPhotoPickerInfo/FJPhotoPreviewController.m"
+            timestampString = "532270107.98772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "-viewDidLayoutSubviews"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

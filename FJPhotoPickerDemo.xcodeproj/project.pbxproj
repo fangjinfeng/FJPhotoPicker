@@ -395,7 +395,7 @@
 				TargetAttributes = {
 					3015BB191F6FF03F007A7035 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = L8R666257B;
+						DevelopmentTeam = VUDZ3Y2BG4;
 						ProvisioningStyle = Automatic;
 					};
 					3015BB321F6FF03F007A7035 = {
@@ -651,7 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L8R666257B;
+				DEVELOPMENT_TEAM = VUDZ3Y2BG4;
 				INFOPLIST_FILE = FJPhotoPickerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -664,7 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L8R666257B;
+				DEVELOPMENT_TEAM = VUDZ3Y2BG4;
 				INFOPLIST_FILE = FJPhotoPickerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

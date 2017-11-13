@@ -18,6 +18,23 @@
 // 每一行 显示 图片 数量
 #define kCollectionViewColumnNumber 4
 
+// iPhoneX 状态栏 高度差
+#define kTabbarBarHeightGap 34
+
+// iPhoneX 导航栏 高度差
+#define kNavigationBarHeightGap 22
+
+// iPhoneX
+#define kIPhoneX ([[UIScreen mainScreen] bounds].size.height >= 812.0)
+
+// 状态栏 高度
+#define kTabbarHeight  ([[UIScreen mainScreen] bounds].size.height >= 812.0  ?83 : 49)
+
+// 导航栏 高度
+#define kNavigationBarHeight     ([[UIScreen mainScreen] bounds].size.height >= 812.0 ? 88 : 64)
+
+
+
 // 弱引用
 #define weakify(var)   __weak typeof(var) weakSelf = var
 // 强引用

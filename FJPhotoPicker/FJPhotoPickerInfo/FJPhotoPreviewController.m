@@ -12,6 +12,7 @@
 #import "UIView+FJLayout.h"
 #import "FJImagePickerController.h"
 #import "FJImageManager.h"
+#import "FJDefine.h"
 #import "FJImageCropManager.h"
 
 @interface FJPhotoPreviewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate> {
@@ -214,15 +215,23 @@
 
 #pragma mark - Layout
 
+- (CGFloat)bottomToolBarHeight {
+    CGFloat bottomToolBarHeight = 44.0f;
+    if (kIPhoneX) {
+        bottomToolBarHeight += kTabbarBarHeightGap;
+    }
+    return bottomToolBarHeight;
+}
+
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    
     FJImagePickerController *_tzImagePickerVc = (FJImagePickerController *)self.navigationController;
 
-    _naviBar.frame = CGRectMake(0, 0, self.view.fj_width, 64);
-    _backButton.frame = CGRectMake(10, 10, 44, 44);
-    _selectButton.frame = CGRectMake(self.view.fj_width - 54, 10, 42, 42);
+    _naviBar.frame = CGRectMake(0, 0, self.view.fj_width, kNavigationBarHeight);
+    _backButton.frame = CGRectMake(10, _naviBar.fj_height - 40.0f, 44, 44);
+    _selectButton.frame = CGRectMake(self.view.fj_width - 54, _naviBar.fj_height - 40.0f, 42, 42);
     
     _layout.itemSize = CGSizeMake(self.view.fj_width + 20, self.view.fj_height);
     _layout.minimumInteritemSpacing = 0;
@@ -237,7 +246,8 @@
         [_collectionView reloadData];
     }
     
-    _toolBar.frame = CGRectMake(0, self.view.fj_height - 44, self.view.fj_width, 44);
+    CGFloat toolBarHeight = [self bottomToolBarHeight];
+    _toolBar.frame = CGRectMake(0, self.view.fj_height - toolBarHeight, self.view.fj_width, toolBarHeight);
     if (_tzImagePickerVc.allowPickingOriginalPhoto) {
         CGFloat fullImageWidth = [_tzImagePickerVc.fullImageBtnTitleStr boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.width;
         _originalPhotoButton.frame = CGRectMake(0, 0, fullImageWidth + 56, 44);

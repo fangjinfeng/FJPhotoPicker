@@ -152,6 +152,7 @@
 }
 
 #pragma mark  --- life circle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -369,7 +370,7 @@
 
 - (void)setMaxImagesCount:(NSInteger)maxImagesCount {
     _maxImagesCount = maxImagesCount;
-    if (maxImagesCount > 1) {
+    if (maxImagesCount > 0) {
         _showSelectBtn = YES;
         _allowCrop = NO;
     }

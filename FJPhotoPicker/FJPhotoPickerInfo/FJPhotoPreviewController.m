@@ -217,8 +217,8 @@
 
 - (CGFloat)bottomToolBarHeight {
     CGFloat bottomToolBarHeight = 44.0f;
-    if (kIPhoneX) {
-        bottomToolBarHeight += kTabbarBarHeightGap;
+    if (kFJPhotoIPhoneX) {
+        bottomToolBarHeight += kFJPhotoTabbarBarHeightGap;
     }
     return bottomToolBarHeight;
 }
@@ -229,7 +229,7 @@
     
     FJImagePickerController *_tzImagePickerVc = (FJImagePickerController *)self.navigationController;
 
-    _naviBar.frame = CGRectMake(0, 0, self.view.fj_width, kNavigationBarHeight);
+    _naviBar.frame = CGRectMake(0, 0, self.view.fj_width, kFJPhotoNavigationBarHeight);
     _backButton.frame = CGRectMake(10, _naviBar.fj_height - 40.0f, 44, 44);
     _selectButton.frame = CGRectMake(self.view.fj_width - 54, _naviBar.fj_height - 40.0f, 42, 42);
     

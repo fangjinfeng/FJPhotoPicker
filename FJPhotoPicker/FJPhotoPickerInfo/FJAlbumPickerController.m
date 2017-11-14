@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.isFirstAppear = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     

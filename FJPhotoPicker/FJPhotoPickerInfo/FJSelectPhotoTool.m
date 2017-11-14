@@ -47,7 +47,7 @@
     UIAlertAction *takeCustomPhoto = [UIAlertAction actionWithTitle:kFJLocalizaedStringForKey(@"FJPhotoBrowserSelectFromPhoneAlbumText") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         FJPhotoActionSheet *actionSheet = [[FJPhotoActionSheet alloc] init];
         //设置照片最大选择数
-        actionSheet.maxSelectCount = 9;
+        actionSheet.maxSelectCount = 1;
         weakify(self);
         [actionSheet showPhotoLibraryWithSender:tmpCurrentViewController lastSelectPhotoModels:nil completion:^(NSArray<UIImage *> * _Nonnull selectPhotos, NSArray<FJSelectPhotoModel *> * _Nonnull selectPhotoModels) {
             strongify(weakSelf);

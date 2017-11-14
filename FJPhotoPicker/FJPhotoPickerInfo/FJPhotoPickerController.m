@@ -249,8 +249,8 @@ static CGFloat itemMargin = 5;
 
 - (CGFloat)bottomToolBarHeight {
     CGFloat bottomToolBarHeight = 50.0f;
-    if (kIPhoneX) {
-        bottomToolBarHeight += kTabbarBarHeightGap;
+    if (kFJPhotoIPhoneX) {
+        bottomToolBarHeight += kFJPhotoTabbarBarHeightGap;
     }
     return bottomToolBarHeight;
 }
@@ -263,7 +263,7 @@ static CGFloat itemMargin = 5;
     CGFloat top = 0;
     CGFloat collectionViewHeight = 0;
     CGFloat bottomToolBarHeight = [self bottomToolBarHeight];
-    CGFloat naviBarHeight = kNavigationBarHeight;
+    CGFloat naviBarHeight = kFJPhotoNavigationBarHeight;
     BOOL isStatusBarHidden = [UIApplication sharedApplication].isStatusBarHidden;
     if (self.navigationController.navigationBar.isTranslucent) {
         top = naviBarHeight;

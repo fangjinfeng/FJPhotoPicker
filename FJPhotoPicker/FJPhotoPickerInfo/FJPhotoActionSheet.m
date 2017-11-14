@@ -77,8 +77,8 @@ typedef void (^handler)(NSArray<UIImage *> *selectPhotos, NSArray<PHAsset *> *se
         self.collectionView.backgroundColor = [UIColor whiteColor];
         [self.collectionView registerNib:[UINib nibWithNibName:@"FJCollectionCell" bundle:[NSBundle bundleForClass:[self class]]] forCellWithReuseIdentifier:@"FJCollectionCell"];
         
-        self.maxSelectCount = 10;
-        self.maxPreviewCount = 20;
+        self.maxSelectCount = kFJPhotoMaxLimitSelectPhotoNum;
+        self.maxPreviewCount = kFJPhotoMaxLimitPreviewPhotoNum;
         self.isHideOriginal = NO;
         self.navigationBarBackgroundColor = kFJPhotoNavigationBarTintColor;
         self.arrayDataSources  = [NSMutableArray array];
@@ -414,7 +414,7 @@ static char RelatedKey;
     } else {
         self.animate = NO;
 
-        FJImagePickerController *imagePickerVc = [[FJImagePickerController alloc] initWithMaxImagesCount:kMaxLimitSelectPhotoNum columnNumber:kCollectionViewColumnNumber delegate:nil pushPhotoPickerVc:YES];
+        FJImagePickerController *imagePickerVc = [[FJImagePickerController alloc] initWithMaxImagesCount:self.maxSelectCount columnNumber:kCollectionViewColumnNumber delegate:nil pushPhotoPickerVc:YES];
         imagePickerVc.allowTakePicture = NO;
         imagePickerVc.allowPickingVideo = NO;
         imagePickerVc.selectedModels = self.arraySelectPhotos;
@@ -581,7 +581,7 @@ static char RelatedKey;
 {
 
     FJImagePickerController *imagePickerVc = [[FJImagePickerController alloc] initWithSelectedAssets:[self generateAssetModelWithSelectedAssetModelArray:_arraySelectPhotos] selectedPhotos:_arraySelectPhotos originalPhotos:self.arrayDataSourcesPhotos  index:indexPath.row];
-    imagePickerVc.maxImagesCount = kMaxLimitSelectPhotoNum;
+    imagePickerVc.maxImagesCount = kFJPhotoMaxLimitSelectPhotoNum;
     imagePickerVc.allowPickingGif = YES;
     imagePickerVc.allowPickingOriginalPhoto = YES;
     imagePickerVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;

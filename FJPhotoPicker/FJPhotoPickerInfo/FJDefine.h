@@ -14,24 +14,26 @@
 #import "NSBundle+FJImagePicker.h"
 
 // 最大 选择 图片 数
-#define kMaxLimitSelectPhotoNum 9
+#define kFJPhotoMaxLimitSelectPhotoNum 9
+// 最大 预览 图片 数
+#define kFJPhotoMaxLimitPreviewPhotoNum 20
 // 每一行 显示 图片 数量
 #define kCollectionViewColumnNumber 4
 
 // iPhoneX 状态栏 高度差
-#define kTabbarBarHeightGap 34
+#define kFJPhotoTabbarBarHeightGap 34
 
 // iPhoneX 导航栏 高度差
-#define kNavigationBarHeightGap 22
+#define kFJPhotoNavigationBarHeightGap 22
 
 // iPhoneX
-#define kIPhoneX ([[UIScreen mainScreen] bounds].size.height >= 812.0)
+#define kFJPhotoIPhoneX ([[UIScreen mainScreen] bounds].size.height >= 812.0)
 
 // 状态栏 高度
-#define kTabbarHeight  ([[UIScreen mainScreen] bounds].size.height >= 812.0  ?83 : 49)
+#define kFJPhotoTabbarHeight  ([[UIScreen mainScreen] bounds].size.height >= 812.0  ?83 : 49)
 
 // 导航栏 高度
-#define kNavigationBarHeight     ([[UIScreen mainScreen] bounds].size.height >= 812.0 ? 88 : 64)
+#define kFJPhotoNavigationBarHeight     ([[UIScreen mainScreen] bounds].size.height >= 812.0 ? 88 : 64)
 
 
 
